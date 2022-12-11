@@ -1,0 +1,611 @@
+---
+items: 
+
+  - item:
+      filename: 100komma7-pod.opml
+      title: 'PodcastIndex.org - Radio 100komma7 Luxembourg - Podcasts'
+      domain: 'lu.100komma7'
+
+  - item:
+      filename: 3speak-tv-podcasts.opml
+      title: 'PodcastIndex.org - 3Speak.tv - Podcasts'
+      domain: 'tv.3speak'
+
+  - item:
+      filename: abc-australia-pod.opml
+      title: 'PodcastIndex.org - ABC Australia - Podcasts'
+      domain: 'au.net.abc'
+      section_language: true
+
+  - item:
+      filename: absolutelypsychic-pod.opml
+      title: 'PodcastIndex.org - AbsolutelyPsychic.com - Podcasts'
+      domain: 'com.absolutelypsychic'
+
+  - item:
+      filename: alandsradio-pod.opml
+      title: 'PodcastIndex.org - Ålands Radio - Podcasts'
+      domain: 'ax.alandsradio'
+
+#  - item:
+#      filename: aragonradio-es-pod.opml
+#      title: 'PodcastIndex.org - AragonRadio - OPML of Podcast feeds'
+#      domain: 'es.aragonradio'
+
+  - item:
+      filename: audiodharma-pod.opml
+      title: 'PodcastIndex.org - AudioDharma - Podcasts'
+      domain: 'org.audiodharma'
+
+  - item:
+      filename: bbc-pod.opml
+      title: 'PodcastIndex.org - BBC Podcasts - OPML of RSS feeds'
+      domain: 'uk.co.bbci'
+
+  - item:
+      filename: canalextremadura-pod.opml
+      title: 'PodcastIndex.org - Canal Extremadura - OPML of Podcast feeds'
+      domain: 'es.canalextremadura'
+
+  - item:
+      filename: ccma-cat-pod.opml
+      title: 'PodcastIndex.org - CCMA Corporació Catalana de Mitjans Audiovisuals - OPML of Podcast feeds'
+      domain: 'cat.ccma'
+
+  - item:
+      filename: cri-cn-pod.opml
+      title: 'PodcastIndex.org - ChinaRadio - Podcasts'
+      domain: 'cn.cri'
+      section_language: true
+
+  - item:
+      filename: cbc-ca-pod.opml
+      title: 'PodcastIndex.org - Canadian Broadcasting Corporation CBC - Podcasts'
+      domain: 'ca.cbc'
+
+  - item:
+      filename: deutsche-welle-pod.opml
+      title: 'PodcastIndex.org - Deutsche Welle - Podcasts'
+      domain: 'com.dw'
+      section_language: true
+
+  - item:
+      filename: deutschlandfunk-pod.opml
+      title: 'PodcastIndex.org - Deutschandlfunk - Podcasts'
+      domain: 'de.deutschlandfunk'
+
+  - item:
+      filename: deutschlandfunkkultur-pod.opml
+      title: 'PodcastIndex.org - Deutschlandfunkkultur - Podcasts'
+      domain: 'de.deutschlandfunkkultur'
+
+  - item:
+      filename: deutschlandfunknova-pod.opml
+      title: 'PodcastIndex.org - Deutschlandfunknova - Podcasts'
+      domain: 'de.deutschlandfunknova'
+
+  - item:
+      filename: dr-pod.opml
+      title: 'PodcastIndex.org - DR.DK - DR Podcasts'
+      domain: 'dk.dr'
+
+  - item:
+      filename: err-ee-pod.opml
+      title: 'PodcastIndex.org - ERR Eesti Rahvusringhääling - Podcasts'
+      domain: 'ee.err'
+      section_language: true
+
+  - item:
+      filename: espn-pod.opml
+      title: 'PodcastIndex.org - ESPN Radio - Podcasts'
+      domain: 'com.espn'
+
+  - item:
+      filename: freie-radios-pod.opml
+      title: 'PodcastIndex.org - freie-radios.net - OPML of Podcast feeds'
+      domain: 'net.freie-radios'
+
+  - item:
+      filename: kbs-co-kr-pod.opml
+      title: 'PodcastIndex.org - KBS Korean Broadcasting System - Podcasts'
+      domain: 'kr.co.kbs'
+      section_language: true
+
+
+  - item:
+      filename: latvijasradio-pod.opml
+      title: 'PodcastIndex.org - LatvijasRadio - Podcasts'
+      domain: 'lv.lsm'
+      section_language: true
+
+  - item:
+      filename: librivox-pod.opml
+      title: 'PodcastIndex.org - Librivox - Podcasts'
+      domain: 'org.librivox'
+
+  - item:
+      filename: livesportscaster-pod.opml
+      title: 'PodcastIndex.org - LiveSportsCaster Podcasts'
+      domain: 'com.livesportscaster'
+
+  - item:
+      filename: loyalbooks-pod.opml
+      title: 'PodcastIndex.org - LoyalBooks - Podcasts'
+      domain: 'com.loyalbooks'
+      section_language: true
+
+  - item:
+      filename: mdr-pod.opml
+      title: 'PodcastIndex.org - MDR Der Mitteldeutsche Rundfunk - Podcasts'
+      domain: 'de.mdr'
+
+  - item:
+      filename: magnatune-pod.opml
+      title: 'PodcastIndex.org - Magnatune - Podcasts'
+      domain: 'com.magnatune'
+
+  - item:
+      filename: ndr-pod.opml
+      title: 'PodcastIndex.org - NDR Norddeutscher Rundfunk - Podcasts'
+      domain: 'de.ndr'
+
+  - item:
+      filename: npo-nl-pod.opml
+      title: 'PodcastIndex.org - NPO Nederlandse Publieke Omroep - NPO.nl - Podcasts'
+      domain: 'nl.npo'
+
+  - item:
+      filename: npr-pod.opml
+      title: 'PodcastIndex.org - National Public Radio - NPR.org - Podcasts'
+      domain: 'org.npr'
+      section_language: true
+
+  - item:
+      filename: nrk-pod.opml
+      title: 'PodcastIndex.org - NRK.no - NRK Podkaster'
+      domain: 'no.nrk'
+      section_language: true
+
+#  - item:
+#      filename: podfm-ru.opml
+#      title: 'PodcastIndex.org - PodFM - подкаст'
+#      domain: 'ru.podfm'
+
+  - item:
+      filename: prx-pod.opml
+      title: 'PodcastIndex.org - PRX.org Public Radio Exchange - Podcasts'
+      domain: 'org.prx,org.prxu'
+
+#  - item:
+#      filename: promodj-pod.opml
+#      title: 'PodcastIndex.org - PromoDJ - Podcasts'
+#      domain: 'com.promodj'
+#      section_language: true
+
+  - item:
+      filename: radiofrance-pod.opml
+      title: 'PodcastIndex.org - RadioFrance - Podcasts'
+      domain: 'net.radiofrance-podcast'
+
+  - item:
+      filename: radiohelsinki-pod.opml
+      title: 'PodcastIndex.org - RadioHelsinki - Podcasts'
+      domain: 'fi.radiohelsinki'
+
+  - item:
+      filename: radiotalk-jp-pod.opml
+      title: 'PodcastIndex.org - RadioTalk Japan - Podcasts'
+      domain: 'jp.radiotalk'
+
+  - item:
+      filename: rai-pod.opml
+      title: 'PodcastIndex.org - Rai Radiotelevisione Italiana - Podcasts'
+      domain: 'it.rai'
+      section_language: true
+
+  - item:
+      filename: reachmd-pod.opml
+      title: 'PodcastIndex.org - ReachMD - Podcasts'
+      domain: 'com.reachmd'
+
+  - item:
+      filename: rdl-de-pod.opml
+      title: 'PodcastIndex.org - Radio Dreyeckland - Podcasts'
+      domain: 'de.rdl'
+
+  - item:
+      filename: rfi-fr-pod.opml
+      title: 'PodcastIndex.org - RFI.fr - Podcasts'
+      domain: 'fr.rfi'
+      section_language: true
+
+  - item:
+      filename: rfi-ro-pod.opml
+      title: 'PodcastIndex.org - RFI.ro - RFI România Podcasts'
+      domain: 'ro.rfi'
+
+  - item:
+      filename: rtbf-pod.opml
+      title: 'PodcastIndex.org - RTBF Radio Télévision Belge Francophone - Podcasts'
+      domain: 'be.rtbf'
+
+  - item:
+      filename: rteie-pod.opml
+      title: 'PodcastIndex.org - RTÉ Ireland - Podcasts'
+      domain: 'ie.rte'
+      section_language: true
+
+#  - item:
+#      filename: rtl-fr-pod.opml
+#      title: 'PodcastIndex.org - RTL France - Podcasts'
+#      domain: 'fr.rtl'
+
+  - item:
+      filename: rthk-pod.opml
+      title: 'PodcastIndex.org - RTHK Hong Kong - Podcasts'
+      domain: 'hk.rthk,hk.org.rthk'
+      section_language: true
+
+  - item:
+      filename: rtp-pt-pod.opml
+      title: 'PodcastIndex.org - RTP, Rádio e Televisão de Portugal - Podcasts'
+      domain: 'pt.rtp'
+
+  - item:
+      filename: rts-radio-television-suisse-pod.opml
+      title: 'PodcastIndex.org - RTS Radio Television Suiss - Podcasts'
+      domain: 'ch.rts'
+
+  - item:
+      filename: rtve-pod.opml
+      title: 'PodcastIndex.org - RTVE España - Podcasts'
+      domain: 'es.rtve'
+      section_language: true
+
+  - item:
+      filename: rtvs-sk-pod.opml
+      title: 'PodcastIndex.org - RTVS Slovakia - Podcasts'
+      domain: 'sk.rtvs'
+      section_language: true
+
+  - item:
+      filename: sbs-co-kr-pod.opml
+      title: 'PodcastIndex.org - SBS Korea - Podcasts'
+      domain: 'kr.co.sbs'
+
+  - item:
+      filename: sr-pod.opml
+      title: 'PodcastIndex.org - SverigesRadio - Podcasts'
+      domain: 'se.sr'
+
+  - item:
+      filename: sondaghelaveckan-pod.opml
+      title: 'PodcastIndex.org - Söndag hela veckan podcasts'
+      domain: 'se.sondaghelaveckan'
+
+  - item:
+      filename: rac1-cat-pod.opml
+      title: 'PodcastIndex.org - RAC1 - OPML of Podcast feeds'
+      domain: 'cat.rac1'
+
+  - item:
+      filename: radio-free-europe-kavkazr-pod.opml
+      title: 'PodcastIndex.org - Radio Free Europe - Kavkazr podcasts'
+      domain: 'com.kavkazr'
+
+  - item:
+      filename: rti-pod.opml
+      title: 'PodcastIndex.org - RTI Radio Taiwan International Podcasts'
+      domain: 'tw.rti,tw.org.rti'
+      section_language: true
+
+  - item:
+      filename: thaipbspodcast.opml
+      title: 'PodcastIndex.org - Thai PBS Podcasts'
+      domain: 'com.thaipbspodcast'
+
+  - item:
+      filename: twit-audio-pod.opml
+      title: 'PodcastIndex.org - Twit.tv Network Podcasts'
+      domain: 'tv.twit'
+
+  - item:
+      filename: the-conversation-podcasts.opml
+      title: 'PodcastIndex.org - The Conversation / La Conversation Podcasts'
+      domain: 'com.theconversation'
+      section_language: true
+
+  - item:
+      filename: university-of-oxford-brookes-podcasts.opml
+      title: 'PodcastIndex.org - University of Oxford Brookes'
+      domain: 'uk.ac.brookes'
+
+  - item:
+      filename: university-of-cambridge-podcasts.opml
+      title: 'PodcastIndex.org - University of Cambridge Podcasts'
+      domain: 'uk.ac.cam'
+
+  - item:
+      filename: university-of-glasgow-podcasts.opml
+      title: 'PodcastIndex.org - University of Glasgow'
+      domain: 'uk.ac.gla'
+
+  - item:
+      filename: london-school-of-economics-and-political-science-podcasts.opml
+      title: 'PodcastIndex.org - London School of Economics and Political Science'
+      domain: 'uk.ac.lse'
+
+  - item:
+      filename: open-university-podcasts.opml
+      title: 'PodcastIndex.org - The Open University'
+      domain: 'uk.ac.open'
+
+  - item:
+      filename: university-of-oxford-podcasts.opml
+      title: 'PodcastIndex.org - University of Oxford Podcasts'
+      domain: 'uk.ac.ox'
+
+  - item:
+      filename: university-college-london-podcasts.opml
+      title: 'PodcastIndex.org - University College London'
+      domain: 'uk.ac.ucl'
+
+  - item:
+      filename: university-of-nottingham-podcasts.opml
+      title: 'PodcastIndex.org - University of Nottingham Podcasts'
+      domain: 'uk.ac.nottingham'
+
+  - item:
+      filename: ur-pod.opml
+      title: 'PodcastIndex.org - UR Utbildningsradion - Podcasts'
+      domain: 'se.ur'
+
+  - item:
+      filename: vaticannews.opml
+      title: 'PodcastIndex.org - Vatican News - Podcasts'
+      domain: 'va.vaticannews'
+      section_language: true
+
+  - item:
+      filename: voa-ndebele-pod.opml
+      title: 'PodcastIndex.org - Voice of America - Ndebele Podcasts'
+      domain: 'com.voandebele'
+
+  - item:
+      filename: voa-shona-pod.opml
+      title: 'PodcastIndex.org - Voice of America - Shona Podcasts'
+      domain: 'com.voashona'
+
+#  - item:
+#      filename: voa-news-pod.opml
+#      title: 'PodcastIndex.org - Voice of America - News Podcasts'
+#      domain: 'com.voanews.www'
+
+#  - item:
+#      filename: voa-learnenglish-pod.opml
+#      title: 'PodcastIndex.org - Voice of America - Learn English Podcasts'
+#      domain: 'com.voanews.learningenglish'
+
+  - item:
+      filename: voa-afaanoromoo-pod.opml
+      title: 'PodcastIndex.org - Voice of America - Afaan Oromoo Podcasts'
+      domain: 'com.voaafaanoromoo'
+
+  - item:
+      filename: voa-afrique-pod.opml
+      title: 'PodcastIndex.org - Voice of America - Afrique Podcasts'
+      domain: 'com.voaafrique'
+
+  - item:
+      filename: voa-amerikaninsesi-pod.opml
+      title: 'PodcastIndex.org - Voice of America - Amerikanın Səsi Podcasts'
+      domain: 'org.amerikaninsesi'
+
+  - item:
+      filename: voa-amerikaovozi-pod.opml
+      title: 'PodcastIndex.org - Voice of America - Amerika Ovozi Radiosi Podcasts'
+      domain: 'com.amerikaovozi'
+
+#  - item:
+#      filename: voa-amharic-pod.opml
+#      title: 'PodcastIndex.org - Voice of America - Amharic Podcasts'
+#      domain: 'com.voanews.amharic'
+
+  - item:
+      filename: voa-bambara-pod.opml
+      title: 'PodcastIndex.org - Voice of America - Bambara Podcasts'
+      domain: 'com.voabambara'
+
+  - item:
+      filename: voa-bangla-pod.opml
+      title: 'PodcastIndex.org - Voice of America - Bangla Podcasts'
+      domain: 'com.voabangla'
+
+#  - item:
+#      filename: voa-burmese-pod.opml
+#      title: 'PodcastIndex.org - Voice of America - Burmese Podcasts'
+#      domain: 'com.voanews.burmese'
+
+  - item:
+      filename: voa-cambodia-pod.opml
+      title: 'PodcastIndex.org - Voice of America - Khmer Podcasts'
+      domain: 'com.voacambodia,com.voanews.khmer'
+      section_language: true
+
+#  - item:
+#      filename: voa-cantonese-pod.opml
+#      title: 'PodcastIndex.org - Voice of America - Cantonese Podcasts'
+#      domain: 'com.voacantonese'
+
+  - item:
+      filename: voa-chinese-pod.opml
+      title: 'PodcastIndex.org - Voice of America - Chinese Podcasts'
+      domain: 'com.voachinese'
+
+  - item:
+      filename: voa-hausa-pod.opml
+      title: 'PodcastIndex.org - Voice of America - Hausa Podcasts'
+      domain: 'com.voahausa'
+
+  - item:
+      filename: voa-indonesia-pod.opml
+      title: 'PodcastIndex.org - Voice of America - Bahasa Indonesia Podcasts'
+      domain: 'com.voaindonesia'
+
+  - item:
+      filename: voa-korea-pod.opml
+      title: 'PodcastIndex.org - Voice of America - Korea 한국어 Podcasts'
+      domain: 'com.voakorea'
+
+#  - item:
+#      filename: voa-lao-pod.opml
+#      title: 'PodcastIndex.org - Voice of America - Lao Podcasts'
+#      domain: 'com.voanews.lao'
+
+#  - item:
+#      filename: voa-noticias-pod.opml
+#      title: 'PodcastIndex.org - Voice of America - Español Podcasts'
+#      domain: 'com.voanoticias'
+
+  - item:
+      filename: voa-nouvel-pod.opml
+      title: 'PodcastIndex.org - Voice of America - Creole Podcasts'
+      domain: 'com.voanouvel'
+
+  - item:
+      filename: voa-portugues-pod.opml
+      title: 'PodcastIndex.org - Voice of America - Português Podcasts'
+      domain: 'com.voaportugues'
+
+  - item:
+      filename: voa-somali-pod.opml
+      title: 'PodcastIndex.org - Voice of America - Soomaaliga Podcasts'
+      domain: 'com.voasomali'
+
+  - item:
+      filename: voa-swahili-pod.opml
+      title: 'PodcastIndex.org - Voice of America - Kiswahili Podcasts'
+      domain: 'com.voaswahili'
+
+  - item:
+      filename: voa-thai-pod.opml
+      title: 'PodcastIndex.org - Voice of America - ไทย Podcasts'
+      domain: 'com.voathai'
+
+  - item:
+      filename: voa-tibetan-pod.opml
+      title: 'PodcastIndex.org - Voice of America - བོད་ཡིག Podcasts'
+      domain: 'com.voatibetan,com.voatibetanenglish'
+      #section_language: true
+
+  - item:
+      filename: voa-tiengviet-pod.opml
+      title: 'PodcastIndex.org - Voice of America - Tiếng Việt Podcasts'
+      domain: 'com.voatiengviet'
+
+#  - item:
+#      filename: voa-tigrigna-pod.opml
+#      title: 'PodcastIndex.org - Voice of America - Tigrigna Podcasts'
+#      domain: 'com.voanews.tigrigna'
+
+  - item:
+      filename: voa-zimbabwe-pod.opml
+      title: 'PodcastIndex.org - Voice of America - Zimbabwe Podcasts'
+      domain: 'com.voazimbabwe'
+
+#  - item:
+#      filename: voa-dari-pod.opml
+#      title: 'PodcastIndex.org - Voice of America - Dari Podcasts'
+#      domain: 'com.darivoa'
+
+  - item:
+      filename: voa-pashto-pod.opml
+      title: 'PodcastIndex.org - Voice of America - Pashto Podcasts'
+      domain: 'com.pashtovoa,com.voadeewanews'
+
+  - item:
+      filename: voa-urdu-pod.opml
+      title: 'PodcastIndex.org - Voice of America - Urdu Podcasts'
+      domain: 'com.urduvoa'
+
+  - item:
+      filename: voa-radiyoyacu-pod.opml
+      title: 'PodcastIndex.org - Voice of America - Radiyoyacu Podcasts'
+      domain: 'com.radiyoyacuvoa'
+
+  - item:
+      filename: voa-zeriamerikes-pod.opml
+      title: 'PodcastIndex.org - Voice of America - Zëri Amerikës Podcasts'
+      domain: 'com.zeriamerikes'
+
+#  - item:
+#      filename: voa-all-languages-podcasts.opml
+#      title: 'PodcastIndex.org - Voice of America - Multilingual'
+#      domain:
+#      - com.amerikaovozi
+#      - com.darivoa
+#      - com.pashtovoa
+#      - com.radiyoyacuvoa
+#      - com.urduvoa
+#      - com.voaafaanoromoo
+#      - com.voaafrique
+#      - com.voabambara
+#      - com.voabangla
+#      - com.voacambodia
+#      - com.voacantonese
+#      - com.voachinese
+#      - com.voadeewanews
+#      - com.voahausa
+#      - com.voaindonesia
+#      - com.voakorea
+#      - com.voandebele
+#      - com.voanews
+#      - com.voanews.amharic
+#      - com.voanews.burmese
+#      - com.voanews.khmer
+#      - com.voanews.lao
+#      - com.voanews.learningenglish
+#      - com.voanews.tigrigna
+#      - com.voanoticias
+#      - com.voanouvel
+#      - com.voaportugues
+#      - com.voashona
+#      - com.voasomali
+#      - com.voaswahili
+#      - com.voathai
+#      - com.voatibetan
+#      - com.voatibetanenglish
+#      - com.voatiengviet
+#      - com.voazimbabwe
+#      - com.zeriamerikes
+#      - org.amerikaninsesi
+#      section_language: true
+
+
+  - item:
+      filename: voiceamerica-pod.opml
+      title: 'PodcastIndex.org - VoiceAmerica - Podcasts'
+      domain: 'com.voiceamerica'
+
+  - item:
+      filename: yle-fi-pod.opml
+      title: 'PodcastIndex.org - Yle.fi - Podcasts'
+      domain: 'fi.yle'
+
+  - item:
+      filename: islamhouse-pod.opml
+      title: 'PodcastIndex.org - IslamHouse - Podcasts'
+      domain: 'com.islamhouse'
+      section_language: true
+
+#  - item:
+#      filename: deephousemix-com-pod.opml
+#      title: 'PodcastIndex.org - Deephousemix.com - Soulful Funky Deep House Mixes'
+#      domain: 'com.deephousemix'
+
+  - item:
+      filename: rferl-pod.opml
+      title: 'PodcastIndex.org - Radio Free Europe / Radio Liberty Podcasts'
+      domain: 'org.rferl'
+
+...
