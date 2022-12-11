@@ -276,14 +276,11 @@ def ProcessItems(opml_data):
 
 def fetchV4VList():
   opml_struct = {}
-  if 1 == 1:
-    response = GetURL(API_ENDPOINT)
-    if response['status'] == 200:
-      contents = response['text']
-  else:
-    contents = LoadContents(CONTENT_FILE)
+  response = GetURL(API_ENDPOINT)
 
-  objects = json.loads(contents)
+  if response['status'] == 200:
+    contents = response['text']
+    objects = json.loads(contents)
   
   if "feeds" in objects:
     o_feeds = objects['feeds']
