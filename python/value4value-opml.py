@@ -268,68 +268,79 @@ def ProcessItems(opml_data):
   opml += "  </body>\n"
 
   opml += "</opml>\n"
-  
 
+  #print(opml)
 
-  print(opml)
+  filepath = "./podcastindex-org-value4value-enabled.opml"
+  writeFile(filepath, opml)
+  return
+
+def writeFile(filepath, contents):
+  f = open(filepath,"w+")
+  f.write(contents)
+  f.close()
+  return
 
 
 def fetchV4VList():
   opml_struct = {}
   response = GetURL(API_ENDPOINT)
 
+  objects = None
   if response['status'] == 200:
     contents = response['text']
     objects = json.loads(contents)
   
-  if "feeds" in objects:
-    o_feeds = objects['feeds']
-    for o_feed_item in o_feeds:
-      item_id = None
-      item_title = None
-      item_link = None
-      item_feed = None
-      item_lang = None
+  if objects != None:
 
-      if "id" in o_feed_item:
-        item_id = int(o_feed_item['id'])
+    if "feeds" in objects:
+      o_feeds = objects['feeds']
+      for o_feed_item in o_feeds:
+        item_id = None
+        item_title = None
+        item_link = None
+        item_feed = None
+        item_lang = None
 
-      if "title" in o_feed_item:
-        item_title = fullTrim(o_feed_item['title'])
+        if "id" in o_feed_item:
+          item_id = int(o_feed_item['id'])
 
-      if "link" in o_feed_item:
-        item_link = fullTrim(o_feed_item['link'])
-        item_link = fixLink(item_link)
+        if "title" in o_feed_item:
+          item_title = fullTrim(o_feed_item['title'])
 
-      if "url" in o_feed_item:
-        item_feed = fullTrim(o_feed_item['url'])
+        if "link" in o_feed_item:
+          item_link = fullTrim(o_feed_item['link'])
+          item_link = fixLink(item_link)
 
-      if "language" in o_feed_item:
-        item_lang = fullTrim(o_feed_item['language'])
+        if "url" in o_feed_item:
+          item_feed = fullTrim(o_feed_item['url'])
 
-      if "categories" in o_feed_item:
-        categories = o_feed_item['categories']
-        if len(categories) > 0:
-          for cat_key, cat_val in categories.items():
-            category_caption = cat_val
+        if "language" in o_feed_item:
+          item_lang = fullTrim(o_feed_item['language'])
 
+        if "categories" in o_feed_item:
+          categories = o_feed_item['categories']
+          if len(categories) > 0:
+            for cat_key, cat_val in categories.items():
+              category_caption = cat_val
+
+              if category_caption not in opml_struct:
+                opml_struct[category_caption] = {}
+
+              if item_id not in opml_struct[category_caption]:
+                opml_struct[category_caption][item_id] = { "title": item_title, "link": item_link, "feed": item_feed, "language": item_lang }
+
+
+          else:
+            category_caption = "Podcast"
             if category_caption not in opml_struct:
               opml_struct[category_caption] = {}
 
             if item_id not in opml_struct[category_caption]:
-              opml_struct[category_caption][item_id] = { "title": item_title, "link": item_link, "feed": item_feed, "language": item_lang }
+              opml_struct[category_caption][item_id] = { "title": item_title, "link": item_link, "feed": item_feed }
 
-
-        else:
-          category_caption = "Podcast"
-          if category_caption not in opml_struct:
-            opml_struct[category_caption] = {}
-
-          if item_id not in opml_struct[category_caption]:
-            opml_struct[category_caption][item_id] = { "title": item_title, "link": item_link, "feed": item_feed }
-
-  else:
-    print("No feed list in object")
+    else:
+      print("No feed list in object")
 
   return opml_struct
 
