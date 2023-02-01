@@ -608,4 +608,9 @@ items:
       title: 'PodcastIndex.org - Radio Free Europe / Radio Liberty Podcasts'
       domain: 'org.rferl'
 
+  - item:
+      filename: beetoons.opml
+      title: 'PodcastIndex.org - Beetoons TV'
+      domain: 'tv.beetoons'
+
 ...
