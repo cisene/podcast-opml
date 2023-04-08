@@ -27,11 +27,6 @@ items:
       title: 'PodcastIndex.org - Ålands Radio - Podcasts'
       domain: 'ax.alandsradio'
 
-#  - item:
-#      filename: aragonradio-es-pod.opml
-#      title: 'PodcastIndex.org - AragonRadio - OPML of Podcast feeds'
-#      domain: 'es.aragonradio'
-
   - item:
       filename: audiodharma-pod.opml
       title: 'PodcastIndex.org - AudioDharma - Podcasts'
@@ -166,21 +161,10 @@ items:
       domain: 'no.nrk'
       section_language: true
 
-#  - item:
-#      filename: podfm-ru.opml
-#      title: 'PodcastIndex.org - PodFM - подкаст'
-#      domain: 'ru.podfm'
-
   - item:
       filename: prx-pod.opml
       title: 'PodcastIndex.org - PRX.org Public Radio Exchange - Podcasts'
       domain: 'org.prx,org.prxu'
-
-#  - item:
-#      filename: promodj-pod.opml
-#      title: 'PodcastIndex.org - PromoDJ - Podcasts'
-#      domain: 'com.promodj'
-#      section_language: true
 
   - item:
       filename: radiofrance-pod.opml
@@ -234,11 +218,6 @@ items:
       title: 'PodcastIndex.org - RTÉ Ireland - Podcasts'
       domain: 'ie.rte'
       section_language: true
-
-#  - item:
-#      filename: rtl-fr-pod.opml
-#      title: 'PodcastIndex.org - RTL France - Podcasts'
-#      domain: 'fr.rtl'
 
   - item:
       filename: rthk-pod.opml
@@ -597,11 +576,6 @@ items:
       title: 'PodcastIndex.org - IslamHouse - Podcasts'
       domain: 'com.islamhouse'
       section_language: true
-
-#  - item:
-#      filename: deephousemix-com-pod.opml
-#      title: 'PodcastIndex.org - Deephousemix.com - Soulful Funky Deep House Mixes'
-#      domain: 'com.deephousemix'
 
   - item:
       filename: rferl-pod.opml
