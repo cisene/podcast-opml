@@ -320,15 +320,16 @@ def fetchV4VList():
 
         if "categories" in o_feed_item:
           categories = o_feed_item['categories']
-          if len(categories) > 0:
-            for cat_key, cat_val in categories.items():
-              category_caption = cat_val
+          if categories != None:
+            if len(categories) > 0:
+              for cat_key, cat_val in categories.items():
+                category_caption = cat_val
 
-              if category_caption not in opml_struct:
-                opml_struct[category_caption] = {}
+                if category_caption not in opml_struct:
+                  opml_struct[category_caption] = {}
 
-              if item_id not in opml_struct[category_caption]:
-                opml_struct[category_caption][item_id] = { "title": item_title, "link": item_link, "feed": item_feed, "language": item_lang }
+                if item_id not in opml_struct[category_caption]:
+                  opml_struct[category_caption][item_id] = { "title": item_title, "link": item_link, "feed": item_feed, "language": item_lang }
 
 
           else:
