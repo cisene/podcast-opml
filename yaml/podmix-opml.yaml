@@ -93,11 +93,6 @@ items:
       section_language: true
 
   - item:
-      filename: espn-pod.opml
-      title: 'PodcastIndex.org - ESPN Radio - Podcasts'
-      domain: 'com.espn'
-
-  - item:
       filename: freie-radios-pod.opml
       title: 'PodcastIndex.org - freie-radios.net - OPML of Podcast feeds'
       domain: 'net.freie-radios'
@@ -357,16 +352,6 @@ items:
       title: 'PodcastIndex.org - Voice of America - Shona Podcasts'
       domain: 'com.voashona'
 
-#  - item:
-#      filename: voa-news-pod.opml
-#      title: 'PodcastIndex.org - Voice of America - News Podcasts'
-#      domain: 'com.voanews.www'
-
-#  - item:
-#      filename: voa-learnenglish-pod.opml
-#      title: 'PodcastIndex.org - Voice of America - Learn English Podcasts'
-#      domain: 'com.voanews.learningenglish'
-
   - item:
       filename: voa-afaanoromoo-pod.opml
       title: 'PodcastIndex.org - Voice of America - Afaan Oromoo Podcasts'
@@ -386,11 +371,6 @@ items:
       filename: voa-amerikaovozi-pod.opml
       title: 'PodcastIndex.org - Voice of America - Amerika Ovozi Radiosi Podcasts'
       domain: 'com.amerikaovozi'
-
-#  - item:
-#      filename: voa-amharic-pod.opml
-#      title: 'PodcastIndex.org - Voice of America - Amharic Podcasts'
-#      domain: 'com.voanews.amharic'
 
   - item:
       filename: voa-bambara-pod.opml
@@ -583,10 +563,5 @@ items:
       filename: rferl-pod.opml
       title: 'PodcastIndex.org - Radio Free Europe / Radio Liberty Podcasts'
       domain: 'org.rferl'
-
-  - item:
-      filename: beetoons.opml
-      title: 'PodcastIndex.org - Beetoons TV'
-      domain: 'tv.beetoons'
 
 ...
