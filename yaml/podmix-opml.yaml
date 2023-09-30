@@ -10,6 +10,8 @@ items:
       filename: 3speak-tv-podcasts.opml
       title: 'PodcastIndex.org - 3Speak.tv - Podcasts'
       domain: 'tv.3speak'
+      section_language: true
+
 
   - item:
       filename: abc-australia-pod.opml
