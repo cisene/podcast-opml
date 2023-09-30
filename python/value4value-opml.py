@@ -13,8 +13,61 @@ import time
 
 from xml.etree.ElementTree import Element, SubElement, Comment
 
-API_ENDPOINT = 'https://podcastindex.org/api/podcasts/bytag?podcast-value'
-CONTENT_FILE = './value4value-pretty.json'
+#API_ENDPOINT = 'https://podcastindex.org/api/podcasts/bytag?podcast-value'
+#CONTENT_FILE = './value4value-pretty.json'
+
+PODCASTING20_STATE = './pc20-index.json'
+
+def writeFile(filepath, contents):
+  f = open(filepath,"w+")
+  f.write(contents)
+  f.close()
+  return
+
+
+def readFile(filepath):
+  contents = None
+  if os.path.isfile(filepath):
+    try:
+      fp = open(filepath)
+      contents = fp.read()
+    finally:
+      fp.close()
+
+  return contents
+
+
+def urlEncode(data):
+  data = re.sub(r"\x26", "&amp;", str(data), flags=re.IGNORECASE)
+  return data
+
+def htmlEncode(data):
+  data = re.sub(r"\x26", "&amp;", str(data), flags=re.IGNORECASE)
+  data = re.sub(r"\x22", "&quot;", str(data), flags=re.IGNORECASE)
+
+  data = re.sub(r"(\r\n|\r|\n)", "<br>", str(data), flags=re.IGNORECASE)
+
+  return data
+
+def fullTrim(data):
+  data = re.sub(r"(\r\n|\r|\n|\t)", " ", str(data), flags=re.IGNORECASE)
+  data = re.sub(r"^\s{1,}", "", str(data), flags=re.IGNORECASE)
+  data = re.sub(r"\s{1,}$", "", str(data), flags=re.IGNORECASE)
+  data = re.sub(r"\s{2,}", " ", str(data), flags=re.IGNORECASE)
+
+  return data
+
+
+def formatDateString(data):
+  dt = datetime.fromisoformat(data)
+  datestr = dt.strftime("%a, %d %b %Y %H:%M:%S")
+  return datestr
+
+def dateNow():
+  my_date = datetime.now()
+  data = str(my_date.strftime('%Y-%m-%d %H:%M:%S'))
+  return data
+
 
 def fixLink(data):
   data = fullTrim(data)
@@ -152,204 +205,165 @@ def GetURL(url):
   return result_struct
 
 
-def htmlEncode(data):
-  data = re.sub(r"\x26", "&amp;", str(data), flags=re.IGNORECASE)
-  data = re.sub(r"\x22", "&quot;", str(data), flags=re.IGNORECASE)
-  return data
 
-def fullTrim(data):
-  data = re.sub(r"(\r\n|\r|\n|\t)", " ", str(data), flags=re.IGNORECASE)
-  data = re.sub(r"^\s{1,}", "", str(data), flags=re.IGNORECASE)
-  data = re.sub(r"\s{1,}$", "", str(data), flags=re.IGNORECASE)
-  data = re.sub(r"\s{2,}", " ", str(data), flags=re.IGNORECASE)
+def fetchIndex():
 
-  return data
+  dictIndex = {}
+
+  url_max = 1000
+  url_start_at = 1
+  last_round = False
+
+  while (1):
+    url = f"https://podcastindex.org/api/podcasts/bytag?podcast-value&max={url_max}&start_at={url_start_at}"
+
+    response = GetURL(url)
+    print(f"{url} -> {response['status']} ..")
+    if response['status'] == 200:
+      contents = response['text']
+
+      objects = None
+      objects = json.loads(contents)
+      if objects != None:
+
+        if "nextStartAt" in objects:
+          if objects['nextStartAt'] != None:
+            url_start_at = objects['nextStartAt']
+        else:
+          last_round = True
+
+        feeds = None
+        if "feeds" in objects:
+          if objects['feeds'] != None:
+            feeds = objects['feeds']
+
+        if feeds != None:
+          for obj in feeds:
+
+            opml_item = {
+              'feedGuid': obj['podcastGuid'],
+              'language': obj['language'],
+              'title': obj['title'],
+              'xmlurl': obj['url'],
+              'htmlUrl': obj['link'],
+              'description': obj['description'],
+              'type': 'link',
+              'version': 'RSS',
+            }
+
+            if "categories" in obj:
+              if obj['categories'] != None:
+                for cat in obj['categories']:
+                  category_name = obj['categories'][cat]
+
+                  if category_name not in dictIndex:
+                    dictIndex[category_name] = []
+
+                  if opml_item not in dictIndex[category_name]:
+                    dictIndex[category_name].append(opml_item)
+
+    if last_round == True:
+      break
+
+  state_contents = json.dumps(dictIndex)
+  writeFile('./pc20-index.json', state_contents)
+  return dictIndex
+
+def renderCategoriesToOPML(idx):
+  if idx != None:
+    for cat in idx.keys():
+      category_filename = cat.lower()
+      category_filename = re.sub(r"\x20", "-", str(category_filename), flags=re.IGNORECASE)
+
+      filepath = f"./podcastindex-org-podcasting-2.0-category-{category_filename}.opml"
+      opml_url = re.sub(r"^\x2e\x2f", "", str(filepath), flags=re.IGNORECASE)
+      print(f"Working on {filepath}")
+
+      feeds = idx[cat]
+
+      stack = []
+      stack.append(f"<?xml version=\"1.0\" encoding=\"UTF-8\"?>")
+      stack.append(f"<!-- Source: https://b19.se/data/{opml_url} -->")
+      stack.append(f"<opml version=\"2.0\" xmlns:podcast=\"https://github.com/Podcastindex-org/podcast-namespace/blob/main/docs/1.0.md\">")
+      stack.append(f"  <head>")
+      stack.append(f"    <title>Podcasting 2.0 - Category '{cat}'</title>")
+      stack.append(f"    <dateCreated>{formatDateString(dateNow())} +0100</dateCreated>")
+      stack.append(f"    <dateModified>{formatDateString(dateNow())} +0100</dateModified>")
+      stack.append(f"    <ownerName>PodcastIndex.org</ownerName>")
+      stack.append(f"  </head>")
+      stack.append(f"  <body>")
+      stack.append(f"    <outline text=\"{cat}\">")
+
+      for feed in feeds:
+        item_stack = []
+
+        if "type" in feed:
+          if feed['type'] != None:
+            item_stack.append(f"type=\"{feed['type']}\"")
+
+        if "version" in feed:
+          if feed['version'] != None:
+            item_stack.append(f"version=\"{feed['version']}\"")
+
+        if "language" in feed:
+          if feed['language'] != None:
+            item_language = snipLanguage(feed['language'])
+            item_stack.append(f"language=\"{item_language}\"")
+
+        if "feedGuid" in feed:
+          if feed['feedGuid'] != None:
+            item_stack.append(f"podcast:feedGuid=\"{feed['feedGuid']}\"")
+
+        if "xmlurl" in feed:
+          if feed['xmlurl'] != None:
+            item_xmlUrl = urlEncode(feed['xmlurl'])
+            item_stack.append(f"xmlUrl=\"{item_xmlUrl}\"")
+
+        if "htmlUrl" in feed:
+          if feed['htmlUrl'] != None:
+            item_htmlUrl = urlEncode(feed['htmlUrl'])
+            item_stack.append(f"htmlUrl=\"{item_htmlUrl}\"")
+
+        if "title" in feed:
+          if feed['title'] != None:
+            item_title = htmlEncode(fullTrim(feed['title']))
+            item_stack.append(f"title=\"{item_title}\"")
+
+        if "description" in feed:
+          if feed['description'] != None:
+            item_description = htmlEncode(fullTrim(feed['description']))
+            item_stack.append(f"description=\"{item_description}\"")
+
+        if len(item_stack) > 0:
+          item_contents = " ".join(item_stack)
+
+          stack.append(f"      <opml {item_contents}/>")
+
+      stack.append(f"    </outline>")
+      stack.append(f"  </body>")
+      stack.append(f"</opml>")
 
 
-def formatDateString(data):
-  dt = datetime.fromisoformat(data)
-  datestr = dt.strftime("%a, %d %b %Y %H:%M:%S")
-  return datestr
+      opml_contents = "\n".join(stack)
+      #print(opml_contents)
 
-def dateNow():
-  my_date = datetime.now()
-  data = str(my_date.strftime('%Y-%m-%d %H:%M:%S'))
-  return data
+      writeFile(filepath, opml_contents)
 
+    print("Done!")
 
-def ProcessItems(opml_data):
-  config = {
-    'head': {
-      'title': 'PodcastIndex.org - Value4Value Enabled podcasts in categories',
-      'dateCreated': '2021-11-13 20:25:03',
-      'dateModified': dateNow(),
-      'ownerName': 'PodcastIndex.org',
-      'ownerEmail': 'info@podcastindex.org',
-    }
-  }
-
-  opml = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n"
-  opml += "<!-- Source: https://b19.se/data/podcastindex-org-value4value-enabled.opml -->\n"
-  opml += "<opml version=\"2.0\">\n"
-
-  head_title = config['head']['title']
-  head_dateCreated = formatDateString(config['head']['dateCreated'])
-  head_dateModified = formatDateString(config['head']['dateModified'])
-  ownerName = config['head']['ownerName']
-  ownerEmail = config['head']['ownerEmail']
-
-  opml += "  <head>\n"
-  opml += "    <title>{0}</title>\n".format(str(head_title))
-  opml += "    <dateCreated>{0} +0100</dateCreated>\n".format(str(head_dateCreated))
-  opml += "    <dateModified>{0} +0100</dateModified>\n".format(str(head_dateModified))
-
-  opml += "    <ownerName>{0}</ownerName>\n".format(str(ownerName))
-  opml += "    <ownerEmail>{0}</ownerEmail>\n".format(str(ownerEmail))
-
-  opml += "  </head>\n"
-
-  opml += "  <body>\n"
-
-
-  for category in opml_data:
-
-    issue_title = category
-
-    opml += "    <outline text=\"{0}\">\n".format(
-        str(issue_title),
-      )
-
-    for podcast_obj in opml_data[category].items():
-      #print(podcast_obj, podcast_obj[0], podcast_obj[1])
-      podcast_id = podcast_obj[0]
-      podcast = podcast_obj[1]
-      #print(podcast)
-      podcast_type = "link"
-      podcast_version = "RSS"
-
-      if 'language' not in podcast:
-        podcast_language = "en"
-      else:
-        podcast_language = podcast['language']
-        podcast_language = snipLanguage(podcast_language)
-
-      if 'title' not in podcast:
-        podcast_title = ""
-      else:
-        podcast_title = podcast['title']
-
-      if 'link' not in podcast:
-        podcast_htmlUrl = ""
-      else:
-        podcast_htmlUrl = podcast['link']
-
-      if 'feed' not in podcast:
-        podcast_xmlUrl = ""
-      else:
-        podcast_xmlUrl = podcast['feed']
-
-
-      if len(podcast_htmlUrl) == 0:
-        podcast_htmlUrl = "https://podcastindex.org/podcast/" + str(podcast_id)
-
-
-      opml += "      <opml type=\"{0}\" version=\"{1}\" language=\"{2}\" title=\"{3}\" text=\"{3}\" htmlUrl=\"{4}\" xmlUrl=\"{5}\" />\n".format(
-        str(podcast_type),
-        str(podcast_version),
-        str(podcast_language),
-        htmlEncode(str(podcast_title)),
-        htmlEncode(str(podcast_htmlUrl)),
-        htmlEncode(str(podcast_xmlUrl))
-      )
-
-
-    opml += "    </outline>\n"
-
-  opml += "  </body>\n"
-
-  opml += "</opml>\n"
-
-  #print(opml)
-
-  filepath = "./podcastindex-org-value4value-enabled.opml"
-  writeFile(filepath, opml)
   return
-
-def writeFile(filepath, contents):
-  f = open(filepath,"w+")
-  f.write(contents)
-  f.close()
-  return
-
-
-def fetchV4VList():
-  opml_struct = {}
-  response = GetURL(API_ENDPOINT)
-
-  objects = None
-  if response['status'] == 200:
-    contents = response['text']
-    objects = json.loads(contents)
-  
-  if objects != None:
-
-    if "feeds" in objects:
-      o_feeds = objects['feeds']
-      for o_feed_item in o_feeds:
-        item_id = None
-        item_title = None
-        item_link = None
-        item_feed = None
-        item_lang = None
-
-        if "id" in o_feed_item:
-          item_id = int(o_feed_item['id'])
-
-        if "title" in o_feed_item:
-          item_title = fullTrim(o_feed_item['title'])
-
-        if "link" in o_feed_item:
-          item_link = fullTrim(o_feed_item['link'])
-          item_link = fixLink(item_link)
-
-        if "url" in o_feed_item:
-          item_feed = fullTrim(o_feed_item['url'])
-
-        if "language" in o_feed_item:
-          item_lang = fullTrim(o_feed_item['language'])
-
-        if "categories" in o_feed_item:
-          categories = o_feed_item['categories']
-          if categories != None:
-            if len(categories) > 0:
-              for cat_key, cat_val in categories.items():
-                category_caption = cat_val
-
-                if category_caption not in opml_struct:
-                  opml_struct[category_caption] = {}
-
-                if item_id not in opml_struct[category_caption]:
-                  opml_struct[category_caption][item_id] = { "title": item_title, "link": item_link, "feed": item_feed, "language": item_lang }
-
-
-          else:
-            category_caption = "Podcast"
-            if category_caption not in opml_struct:
-              opml_struct[category_caption] = {}
-
-            if item_id not in opml_struct[category_caption]:
-              opml_struct[category_caption][item_id] = { "title": item_title, "link": item_link, "feed": item_feed }
-
-    else:
-      print("No feed list in object")
-
-  return opml_struct
-
 
 def main():
 
-  opml_data = fetchV4VList()
-  ProcessItems(opml_data)
+
+  if os.path.isfile(PODCASTING20_STATE):
+    contents = LoadContents(PODCASTING20_STATE)
+    pc20index = json.loads(contents)
+  else:
+    pc20index = fetchIndex()
+
+  renderCategoriesToOPML(pc20index)
+
 
 
 if __name__ == '__main__':
