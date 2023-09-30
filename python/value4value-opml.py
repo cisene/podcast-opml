@@ -44,6 +44,8 @@ def urlEncode(data):
 def htmlEncode(data):
   data = re.sub(r"\x26", "&amp;", str(data), flags=re.IGNORECASE)
   data = re.sub(r"\x22", "&quot;", str(data), flags=re.IGNORECASE)
+  data = re.sub(r"\x3c", "&lt;", str(data), flags=re.IGNORECASE)
+  data = re.sub(r"\x3e", "&gt;", str(data), flags=re.IGNORECASE)
 
   data = re.sub(r"(\r\n|\r|\n)", "<br>", str(data), flags=re.IGNORECASE)
 
