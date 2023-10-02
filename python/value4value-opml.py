@@ -339,7 +339,7 @@ def renderCategoriesToOPML(idx):
         if len(item_stack) > 0:
           item_contents = " ".join(item_stack)
 
-          stack.append(f"      <opml {item_contents}/>")
+          stack.append(f"      <outline {item_contents}/>")
 
       stack.append(f"    </outline>")
       stack.append(f"  </body>")
