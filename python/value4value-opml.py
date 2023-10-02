@@ -214,12 +214,18 @@ def fetchIndex():
 
   url_max = 1000
   url_start_at = 1
+  url_start_at_old = 0
   last_round = False
 
   while (1):
     url = f"https://podcastindex.org/api/podcasts/bytag?podcast-value&max={url_max}&start_at={url_start_at}"
 
+    if url_start_at == url_start_at_old:
+      print(f"Offset did not move {url_start_at} == {url_start_at_old} .. bailing out.")
+      break
+
     response = GetURL(url)
+
     print(f"{url} -> {response['status']} ..")
     if response['status'] == 200:
       contents = response['text']
@@ -230,6 +236,7 @@ def fetchIndex():
 
         if "nextStartAt" in objects:
           if objects['nextStartAt'] != None:
+            url_start_at_old = url_start_at
             url_start_at = objects['nextStartAt']
         else:
           last_round = True
