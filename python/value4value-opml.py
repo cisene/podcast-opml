@@ -127,7 +127,7 @@ def GetURL(url):
   }
   
   request_headers = {
-    'User-Agent': 'Mozilla/5.0 (PodcastIndex.Org - OPML/@cisene@podcastindex.social) Gecko/20100101 Firefox/93.0',
+    'User-Agent': 'Mozilla/5.0 (PodcastIndex.Org - OPML/@cisene@podcastindex.social)',
   }
   
   r = requests
