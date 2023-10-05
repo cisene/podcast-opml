@@ -10,11 +10,67 @@ import requests
 import json
 
 import time
+import hashlib
+
 
 from xml.etree.ElementTree import Element, SubElement, Comment
 
-#API_ENDPOINT = 'https://podcastindex.org/api/podcasts/bytag?podcast-value'
-#CONTENT_FILE = './value4value-pretty.json'
+class APIAuthorization:
+
+  api_key = ''
+  api_secret = ''
+  auth_date = 0
+
+  headers = {
+    'User-Agent': 'Python-PodcastIndexLib/0.1 (@cisene)',
+    'X-Auth-Date': '',
+    'X-Auth-Key': '',
+    'Authorization': '',
+  }
+
+  def __init__(self, api_key = '', api_secret = ''):
+    pass
+
+  def _setAuthDateNow(self):
+    self.auth_date = int(time.time())
+
+  def _epochNow(self):
+    return int(time.time())
+
+  def generateHeaders(self):
+    self._setAuthDateNow()
+    hash_input = "".join(
+      [
+        str(self.api_key),
+        str(self.api_secret),
+        str(self.auth_date)
+      ]
+    ).encode('utf-8')
+
+    sha_1 = hashlib.sha1()
+    sha_1.update(hash_input)
+    hash_output = sha_1.hexdigest()
+
+    self.headers['X-Auth-Date'] = str(self.auth_date)
+    self.headers['X-Auth-Key'] = str(self.api_key)
+    self.headers['Authorization'] = str(hash_output)
+    return self.headers
+
+  def refreshHeaders(self, headers):
+    epoch_now = self._epochNow()
+
+    epoch_then = int(headers['X-Auth-Date'])
+    epoch_delta = (epoch_now - epoch_then)
+
+    if epoch_delta > 120:
+      return self.generateHeaders()
+
+    return headers
+
+
+
+
+USER_AGENT = 'Mozilla/5.0 (PodcastIndex.Org - OPML/@cisene@podcastindex.social)'
 
 PODCASTING20_STATE = './pc20-index.json'
 
@@ -108,7 +164,7 @@ def LoadContents(filepath):
   return contents
 
 
-def GetURL(url):
+def GetURL(url, headers):
   result = ''
   response = ''
   response = None
@@ -127,8 +183,14 @@ def GetURL(url):
   }
   
   request_headers = {
-    'User-Agent': 'Mozilla/5.0 (PodcastIndex.Org - OPML/@cisene@podcastindex.social)',
+    'User-Agent': None,
+    'X-Auth-Date': None,
+    'X-Auth-Key': None,
+    'Authorization': None,
   }
+
+  for header in headers:
+    request_headers[header] = headers[header]
   
   r = requests
   try:
@@ -141,7 +203,7 @@ def GetURL(url):
       verify          = True,
       allow_redirects = False
     )
-    result_struct['redirected-to']    = response.url
+    result_struct['redirected-to']        = response.url
     result_struct['encoding']             = response.apparent_encoding
     result_struct['redirected']           = response.is_redirect
     result_struct['redirected-permanent'] = response.is_permanent_redirect
@@ -151,8 +213,6 @@ def GetURL(url):
     result_struct['error']                = ''
     result_struct['error-description']    = ''
     result_struct['headers']              = response.headers
-    
-    result_struct['text'] = flattenResponse(result_struct['text'])
 
   except requests.RequestException as e:
     #print "\tRequestException: " + str(e)
@@ -199,7 +259,6 @@ def GetURL(url):
     pass
 
   except:
-    #print("\tUndefined exception")
     result_struct['error'] = "UndefinedException"
     result_struct['error-description'] = str(response.status_code)
     pass
@@ -208,25 +267,22 @@ def GetURL(url):
 
 
 
-def fetchIndex():
+def fetchIndex(headers):
 
   dictIndex = {}
 
   url_max = 1000
   url_start_at = 1
-  url_start_at_old = 0
+  url_start_at_old = 1
   last_round = False
 
   while (1):
-    url = f"https://podcastindex.org/api/podcasts/bytag?podcast-value&max={url_max}&start_at={url_start_at}"
 
-    if url_start_at == url_start_at_old:
-      print(f"Offset did not move {url_start_at} == {url_start_at_old} .. bailing out.")
-      break
+    url = f"https://api.podcastindex.org/api/1.0/podcasts/bytag?podcast-value&max={url_max}&start_at={url_start_at}"
 
-    response = GetURL(url)
-
+    response = GetURL(url, headers)
     print(f"{url} -> {response['status']} ..")
+
     if response['status'] == 200:
       contents = response['text']
 
@@ -271,11 +327,20 @@ def fetchIndex():
                   if opml_item not in dictIndex[category_name]:
                     dictIndex[category_name].append(opml_item)
 
+      else:
+        print(f"Response was empty, bailing out")
+        break
+
+    else:
+      print(f"Unexpected response, bailing out")
+      break
+
+
     if last_round == True:
       break
 
   state_contents = json.dumps(dictIndex)
-  writeFile('./pc20-index.json', state_contents)
+  writeFile(PODCASTING20_STATE, state_contents)
   return dictIndex
 
 def renderCategoriesToOPML(idx):
@@ -364,12 +429,22 @@ def renderCategoriesToOPML(idx):
 
 def main():
 
+  api_key = os.environ["API_KEY"]
+  api_secret = os.environ["API_SECRET"]
 
-  if os.path.isfile(PODCASTING20_STATE):
-    contents = LoadContents(PODCASTING20_STATE)
-    pc20index = json.loads(contents)
-  else:
-    pc20index = fetchIndex()
+  auth = APIAuthorization()
+  auth.api_key = api_key
+  auth.api_secret = api_secret
+  auth.headers['User-Agent'] = USER_AGENT
+
+  headers = auth.generateHeaders()
+
+
+  #if os.path.isfile(PODCASTING20_STATE):
+  #  contents = LoadContents(PODCASTING20_STATE)
+  #  pc20index = json.loads(contents)
+  #else:
+  pc20index = fetchIndex(headers)
 
   renderCategoriesToOPML(pc20index)
 
