@@ -29,7 +29,7 @@ VERSION = "Podmix-OPML/0.4.1-dev"
 # OPML 1.0
 OPML_1_START = """<?xml version="1.0" encoding="utf-8"?>
 <!-- Created with """ + VERSION + """ -->
-<!-- Source: https://b19.se/data/%(filename) -->
+<!-- Source: https://b19.se/data/opml/podcastindex/%(filename) -->
 <opml version="1.0">
   <head>
     <title>%(title)</title>
@@ -46,7 +46,7 @@ OPML_1_OUTLINE_FEED = '<outline type="rss" title="%(title)" text="%(title)" xmlU
 # OPML 2.0
 OPML_2_START = """<?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with """ + VERSION + """ -->
-<!-- Source: https://b19.se/data/%(filename) -->
+<!-- Source: https://b19.se/data/opml/podcastindex/%(filename) -->
 <!-- Items: %(items) -->
 <opml version="2.0">
   <head>

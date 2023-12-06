@@ -357,7 +357,7 @@ def renderCategoriesToOPML(idx):
 
       stack = []
       stack.append(f"<?xml version=\"1.0\" encoding=\"UTF-8\"?>")
-      stack.append(f"<!-- Source: https://b19.se/data/{opml_url} -->")
+      stack.append(f"<!-- Source: https://b19.se/data/opml/podcastindex/{opml_url} -->")
       stack.append(f"<opml version=\"2.0\" xmlns:podcast=\"https://github.com/Podcastindex-org/podcast-namespace/blob/main/docs/1.0.md\">")
       stack.append(f"  <head>")
       stack.append(f"    <title>Podcasting 2.0 - Category '{cat}'</title>")
