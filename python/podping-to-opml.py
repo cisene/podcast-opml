@@ -300,7 +300,7 @@ def expandObjectsToOPML(objects):
   stack.append(f"    <ownerName>{htmlEncode(objects['head']['ownerName'])}</ownerName>")
   stack.append(f"  </head>")
   stack.append(f"  <body>")
-  stack.append(f"    <outline>")
+  #stack.append(f"    <outline>")
 
   for ol in objects['body']:
     inner_stack = []
@@ -310,9 +310,10 @@ def expandObjectsToOPML(objects):
 
     inner_stack.append("/>")
     ol_line = " ".join(inner_stack)
-    stack.append(f"      {ol_line}")
+    #stack.append(f"      {ol_line}")
+    stack.append(f"    {ol_line}")
 
-  stack.append(f"    </outline>")
+  #stack.append(f"    </outline>")
   stack.append(f"  </body>")
   stack.append(f"</opml>")
 
