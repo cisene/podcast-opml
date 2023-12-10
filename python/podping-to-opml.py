@@ -339,13 +339,14 @@ def processQueue():
 
         if "url" in item:
           if item['url'] != None:
-            if item['url'] not in collection:
-              collection.append(item['url'])
-              #print(item['url'])
-              line_count += 1
+            if re.search(r"^http(s)?\x3a\x2f\x2f", str(item['url']), flags=re.IGNORECASE):
+              if item['url'] not in collection:
+                collection.append(item['url'])
+                #print(item['url'])
+                line_count += 1
 
-              if (line_count != 0 and (line_count % 1000) == 0):
-                print(f"\t{line_count}")
+                if (line_count != 0 and (line_count % 1000) == 0):
+                  print(f"\t{line_count}")
 
     print(f"\t{line_count} read ")
 
