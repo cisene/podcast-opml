@@ -457,7 +457,7 @@ def processQueue():
     writeFile(opml_filename, opml)
     print(f"\t\tWrote {r_count} entries to file {opml_filename} ..")
 
-
+  return
 
 
 def connectMySQL(db_host, db_port, db_database, db_username, db_password):
@@ -583,6 +583,7 @@ def main():
     print(f"** NO API credentials found")
     exit(1)
 
+  processQueue()
   processQueue()
 
 
