@@ -332,6 +332,8 @@ def processQueue():
     collection = []
     
     line_count = 0
+    line_max = int(redisClient.llen(redis_key))
+
     while (int(redisClient.llen(redis_key)) > 0):
       obj = redisClient.rpop(redis_key)
       if obj != None:
@@ -342,13 +344,12 @@ def processQueue():
             if re.search(r"^http(s)?\x3a\x2f\x2f", str(item['url']), flags=re.IGNORECASE):
               if item['url'] not in collection:
                 collection.append(item['url'])
-                #print(item['url'])
                 line_count += 1
 
-                if (line_count != 0 and (line_count % 1000) == 0):
-                  print(f"\t{line_count}")
+                #if (line_count != 0 and (line_count % 1000) == 0):
+                #  print(f"\t{line_count}")
 
-    print(f"\t{line_count} read ")
+    print(f"\t{line_count} read of {line_max}")
 
     headers = auth.generateHeaders()
 
@@ -454,7 +455,7 @@ def processQueue():
     opml = expandObjectsToOPML(objects)
 
     writeFile(opml_filename, opml)
-    print(f"\t\tWrote to file {opml_filename} ..")
+    print(f"\t\tWrote {r_count} entries to file {opml_filename} ..")
 
 
 
