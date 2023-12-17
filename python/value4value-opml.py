@@ -374,11 +374,13 @@ def renderCategoriesToOPML(idx):
 
         if "type" in feed:
           if feed['type'] != None:
-            item_stack.append(f"type=\"{feed['type']}\"")
+            #item_stack.append(f"type=\"{feed['type']}\"")
+            item_stack.append(f"type=\"rss\"")
 
         if "version" in feed:
           if feed['version'] != None:
-            item_stack.append(f"version=\"{feed['version']}\"")
+            #item_stack.append(f"version=\"{feed['version']}\"")
+            item_stack.append(f"version=\"RSS2\"")
 
         if "language" in feed:
           if feed['language'] != None:
