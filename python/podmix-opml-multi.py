@@ -59,7 +59,8 @@ OPML_2_END = """  </body>
 
 # OPML_2_OUTLINE_FEED = '<outline type="Podcast" version="RSS" language="%(language)" title="%(title)" htmlUrl="%(html_url)" xmlUrl="%(xml_url)" />'
 # OPML_2_OUTLINE_FEED = '<outline type="Podcast" version="RSS" language="%(language)" title="%(title)" text="%(title)" htmlUrl="%(html_url)" xmlUrl="%(xml_url)" />'
-OPML_2_OUTLINE_FEED = '<outline type="link" version="RSS" language="%(language)" title="%(title)" text="%(title)" htmlUrl="%(html_url)" xmlUrl="%(xml_url)" />'
+#OPML_2_OUTLINE_FEED = '<outline type="link" version="RSS" language="%(language)" title="%(title)" text="%(title)" htmlUrl="%(html_url)" xmlUrl="%(xml_url)" />'
+OPML_2_OUTLINE_FEED = '<outline type="rss" version="RSS2" language="%(language)" title="%(title)" text="%(title)" htmlUrl="%(html_url)" xmlUrl="%(xml_url)" />'
 
 OPML_2_OUTLINE_LANGUAGE_START = '<outline text="%(language)">'
 OPML_2_OUTLINE_LANGUAGE_END = '</outline>'
