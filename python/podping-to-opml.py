@@ -434,8 +434,8 @@ def processQueue():
           channel_language = "en"
 
         item = {
-          'type':             'link',
-          'version':          'RSS',
+          'type':             'rss',
+          'version':          'RSS2',
           'language':         f"{forceISO639(channel_language)}",
           'podcast:feedGuid': f"{channel_guid}",
           'podcast:medium':   f"{channel_medium}",
