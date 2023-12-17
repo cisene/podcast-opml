@@ -308,7 +308,7 @@ def fetchIndex(headers):
             opml_item = {
               'feedGuid': obj['podcastGuid'],
               'language': obj['language'],
-              #'title': obj['title'],
+              'title': obj['title'],
               'text': obj['title'],
               'xmlurl': obj['url'],
               'htmlUrl': obj['link'],
@@ -399,10 +399,10 @@ def renderCategoriesToOPML(idx):
             item_htmlUrl = urlEncode(feed['htmlUrl'])
             item_stack.append(f"htmlUrl=\"{item_htmlUrl}\"")
 
-        #if "title" in feed:
-        #  if feed['title'] != None:
-        #    item_title = htmlEncode(fullTrim(feed['title']))
-        #    item_stack.append(f"title=\"{item_title}\"")
+        if "title" in feed:
+          if feed['title'] != None:
+            item_title = htmlEncode(fullTrim(feed['title']))
+            item_stack.append(f"title=\"{item_title}\"")
 
         if "text" in feed:
           if feed['text'] != None:
