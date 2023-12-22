@@ -313,14 +313,23 @@ def escapeHTML(data):
   data = re.sub(r"\b\x26\b",  "&amp;",    data, flags=re.UNICODE)
   data = re.sub(r"\B\x26\B",  "&amp;",    data, flags=re.UNICODE)
   
-  data = re.sub(r"\x22",      "&quot;",  data, flags=re.UNICODE)
+  data = re.sub(r"\x22",  "&quot;",  data, flags=re.UNICODE)
   data = re.sub(r"\x27",  "&apos;",    data, flags=re.UNICODE)
   data = re.sub(r"\x27",  "&apos;",    data, flags=re.UNICODE)
+
+  data = re.sub(r"\xc5\x93", "&#339;", data, flags=re.IGNORECASE)
+  data = re.sub(r"\x26oelig\x3b", "&#339;", data, flags=re.IGNORECASE)
+
   data = re.sub(r"\x3c",  "&lt;", data, flags=re.UNICODE)
   data = re.sub(r"\x3e",  "&gt;", data, flags=re.UNICODE)
   # data = re.sub(r"\xa9",  "&copy;", data, flags=re.UNICODE)
   
   data = re.sub(r"\x26(?!(?:amp|gt|lt|aacute|acirc|aelig|agrave|amp|apos|aring|atilde|auml|bull|ccedil|copy|dagger|deg|eacute|ecirc|egrave|eth|euml|euro|hellip|iacute|icirc|iexcl|igrave|iquest|iuml|laquo|mdash|micro|middot|nbsp|ndash|ntilde|oacute|ocirc|oelig|ograve|ordf|ordm|oslash|otilde|ouml|permil|pound|raquo|rsquo|reg|szlig|thorn|trade|uacute|ucirc|ugrave|uuml|yacute|yuml|\x23\d{1,})\x3b)", "&amp;", str(data), flags=re.IGNORECASE)
+
+  data = re.sub(r"\x26apos\x3b\x26apos\x3b", "&apos;", data, flags=re.IGNORECASE)
+
+  data = re.sub(r"\x26amp\x3bquot\x3b", "&quot;", data, flags=re.IGNORECASE)
+  data = re.sub(r"\x26amp\x3boelig\x3b", "&#339;", data, flags=re.IGNORECASE)
 
   return data
 
