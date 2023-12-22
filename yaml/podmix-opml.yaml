@@ -12,7 +12,6 @@ items:
       domain: 'tv.3speak'
       section_language: true
 
-
   - item:
       filename: abc-australia-pod.opml
       title: 'PodcastIndex.org - ABC Australia - Podcasts'
@@ -114,6 +113,7 @@ items:
       filename: librivox-pod.opml
       title: 'PodcastIndex.org - Librivox - Podcasts'
       domain: 'org.librivox'
+      section_language: true
 
   - item:
       filename: livesportscaster-pod.opml
