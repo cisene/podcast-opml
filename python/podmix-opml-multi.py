@@ -24,7 +24,7 @@ global config
 global languageLookup
 
 
-VERSION = "Podmix-OPML/0.4.1-dev"
+VERSION = "Podmix-OPML/0.4.4-dev"
 
 # OPML 1.0
 OPML_1_START = """<?xml version="1.0" encoding="utf-8"?>
@@ -173,6 +173,9 @@ def ProcessItems(outputfolder):
     if "section_language" in item['item']:
       if item['item']['section_language'] == True:
         do_language_sections = True
+
+        language = None
+        language_id = None
 
     if "language" in item['item']:
       if item['item']['language'] != None:
