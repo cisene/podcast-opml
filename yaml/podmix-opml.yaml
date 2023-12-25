@@ -7,6 +7,421 @@ items:
       domain: 'lu.100komma7'
 
   - item:
+      filename: islamhouse-pod-ar.opml
+      title: 'PodcastIndex.org - IslamHouse - Arabic Podcasts'
+      domain: 'com.islamhouse'
+      language: 'ar'
+
+  - item:
+      filename: islamhouse-pod-bs.opml
+      title: 'PodcastIndex.org - IslamHouse - Bosnian Podcasts'
+      domain: 'com.islamhouse'
+      language: 'bs'
+
+  - item:
+      filename: islamhouse-pod-uz.opml
+      title: 'PodcastIndex.org - IslamHouse - Uzbek Podcasts'
+      domain: 'com.islamhouse'
+      language: 'uz'
+
+  - item:
+      filename: islamhouse-pod-am.opml
+      title: 'PodcastIndex.org - IslamHouse - Amharic Podcasts'
+      domain: 'com.islamhouse'
+      language: 'am'
+
+  - item:
+      filename: islamhouse-pod-sw.opml
+      title: 'PodcastIndex.org - IslamHouse - Swahili (macrolanguage) Podcasts'
+      domain: 'com.islamhouse'
+      language: 'sw'
+
+  - item:
+      filename: islamhouse-pod-aa.opml
+      title: 'PodcastIndex.org - IslamHouse - Afar Podcasts'
+      domain: 'com.islamhouse'
+      language: 'aa'
+
+  - item:
+      filename: islamhouse-pod-ti.opml
+      title: 'PodcastIndex.org - IslamHouse - Tigrinya Podcasts'
+      domain: 'com.islamhouse'
+      language: 'ti'
+
+  - item:
+      filename: islamhouse-pod-or.opml
+      title: 'PodcastIndex.org - IslamHouse - Oriya (macrolanguage) Podcasts'
+      domain: 'com.islamhouse'
+      language: 'or'
+
+  - item:
+      filename: islamhouse-pod-fr.opml
+      title: 'PodcastIndex.org - IslamHouse - French Podcasts'
+      domain: 'com.islamhouse'
+      language: 'fr'
+
+  - item:
+      filename: islamhouse-pod-ha.opml
+      title: 'PodcastIndex.org - IslamHouse - Hausa Podcasts'
+      domain: 'com.islamhouse'
+      language: 'ha'
+
+  - item:
+      filename: islamhouse-pod-en.opml
+      title: 'PodcastIndex.org - IslamHouse - English Podcasts'
+      domain: 'com.islamhouse'
+      language: 'en'
+
+  - item:
+      filename: islamhouse-pod-lg.opml
+      title: 'PodcastIndex.org - IslamHouse - Ganda Podcasts'
+      domain: 'com.islamhouse'
+      language: 'lg'
+
+  - item:
+      filename: islamhouse-pod-snk.opml
+      title: 'PodcastIndex.org - IslamHouse - Soninke Podcasts'
+      domain: 'com.islamhouse'
+      language: 'snk'
+
+  - item:
+      filename: islamhouse-pod-bn.opml
+      title: 'PodcastIndex.org - IslamHouse - Bengali Podcasts'
+      domain: 'com.islamhouse'
+      language: 'bn'
+
+  - item:
+      filename: islamhouse-pod-yo.opml
+      title: 'PodcastIndex.org - IslamHouse - Yoruba Podcasts'
+      domain: 'com.islamhouse'
+      language: 'yo'
+
+  - item:
+      filename: islamhouse-pod-bm.opml
+      title: 'PodcastIndex.org - IslamHouse - Bambara Podcasts'
+      domain: 'com.islamhouse'
+      language: 'bm'
+
+  - item:
+      filename: islamhouse-pod-so.opml
+      title: 'PodcastIndex.org - IslamHouse - Somali Podcasts'
+      domain: 'com.islamhouse'
+      language: 'so'
+
+  - item:
+      filename: islamhouse-pod-th.opml
+      title: 'PodcastIndex.org - IslamHouse - Thai Podcasts'
+      domain: 'com.islamhouse'
+      language: 'th'
+
+  - item:
+      filename: islamhouse-pod-ak.opml
+      title: 'PodcastIndex.org - IslamHouse - Akan Podcasts'
+      domain: 'com.islamhouse'
+      language: 'ak'
+
+  - item:
+      filename: islamhouse-pod-wo.opml
+      title: 'PodcastIndex.org - IslamHouse - Wolof Podcasts'
+      domain: 'com.islamhouse'
+      language: 'wo'
+
+  - item:
+      filename: islamhouse-pod-ur.opml
+      title: 'PodcastIndex.org - IslamHouse - Urdu Podcasts'
+      domain: 'com.islamhouse'
+      language: 'ur'
+
+  - item:
+      filename: islamhouse-pod-vi.opml
+      title: 'PodcastIndex.org - IslamHouse - Vietnamese Podcasts'
+      domain: 'com.islamhouse'
+      language: 'vi'
+
+  - item:
+      filename: islamhouse-pod-ru.opml
+      title: 'PodcastIndex.org - IslamHouse - Russian Podcasts'
+      domain: 'com.islamhouse'
+      language: 'ru'
+
+  - item:
+      filename: islamhouse-pod-ff.opml
+      title: 'PodcastIndex.org - IslamHouse - Fulah Podcasts'
+      domain: 'com.islamhouse'
+      language: 'ff'
+
+  - item:
+      filename: islamhouse-pod-ml.opml
+      title: 'PodcastIndex.org - IslamHouse - Malayalam Podcasts'
+      domain: 'com.islamhouse'
+      language: 'ml'
+
+  - item:
+      filename: islamhouse-pod-mnk.opml
+      title: 'PodcastIndex.org - IslamHouse - Mandinka Podcasts'
+      domain: 'com.islamhouse'
+      language: 'mnk'
+
+  - item:
+      filename: islamhouse-pod-pt.opml
+      title: 'PodcastIndex.org - IslamHouse - Portuguese Podcasts'
+      domain: 'com.islamhouse'
+      language: 'pt'
+
+  - item:
+      filename: islamhouse-pod-es.opml
+      title: 'PodcastIndex.org - IslamHouse - Spanish Podcasts'
+      domain: 'com.islamhouse'
+      language: 'es'
+
+  - item:
+      filename: islamhouse-pod-fa.opml
+      title: 'PodcastIndex.org - IslamHouse - Persian/Farsi Podcasts'
+      domain: 'com.islamhouse'
+      language: 'fa'
+
+  - item:
+      filename: islamhouse-pod-zh.opml
+      title: 'PodcastIndex.org - IslamHouse - Chinese Podcasts'
+      domain: 'com.islamhouse'
+      language: 'zh'
+
+  - item:
+      filename: islamhouse-pod-tg.opml
+      title: 'PodcastIndex.org - IslamHouse - Tajik Podcasts'
+      domain: 'com.islamhouse'
+      language: 'tg'
+
+  - item:
+      filename: islamhouse-pod-sr.opml
+      title: 'PodcastIndex.org - IslamHouse - Serbian Podcasts'
+      domain: 'com.islamhouse'
+      language: 'sr'
+
+  - item:
+      filename: islamhouse-pod-tr.opml
+      title: 'PodcastIndex.org - IslamHouse - Turkish Podcasts'
+      domain: 'com.islamhouse'
+      language: 'tr'
+
+  - item:
+      filename: islamhouse-pod-id.opml
+      title: 'PodcastIndex.org - IslamHouse - Indonesian Podcasts'
+      domain: 'com.islamhouse'
+      language: 'id'
+
+  - item:
+      filename: islamhouse-pod-ku.opml
+      title: 'PodcastIndex.org - IslamHouse - Kurdish Podcasts'
+      domain: 'com.islamhouse'
+      language: 'ku'
+
+  - item:
+      filename: islamhouse-pod-sq.opml
+      title: 'PodcastIndex.org - IslamHouse - Albanian Podcasts'
+      domain: 'com.islamhouse'
+      language: 'sq'
+
+  - item:
+      filename: islamhouse-pod-kk.opml
+      title: 'PodcastIndex.org - IslamHouse - Kazakh Podcasts'
+      domain: 'com.islamhouse'
+      language: 'kk'
+
+  - item:
+      filename: islamhouse-pod-ta.opml
+      title: 'PodcastIndex.org - IslamHouse - Tamil Podcasts'
+      domain: 'com.islamhouse'
+      language: 'ta'
+
+  - item:
+      filename: islamhouse-pod-tl.opml
+      title: 'PodcastIndex.org - IslamHouse - Tagalog Podcasts'
+      domain: 'com.islamhouse'
+      language: 'tl'
+
+  - item:
+      filename: islamhouse-pod-ps.opml
+      title: 'PodcastIndex.org - IslamHouse - Pashto / Pushto Podcasts'
+      domain: 'com.islamhouse'
+      language: 'ps'
+
+  - item:
+      filename: islamhouse-pod-sg.opml
+      title: 'PodcastIndex.org - IslamHouse - Sango Podcasts'
+      domain: 'com.islamhouse'
+      language: 'sg'
+
+  - item:
+      filename: islamhouse-pod-si.opml
+      title: 'PodcastIndex.org - IslamHouse - Sinhala Podcasts'
+      domain: 'com.islamhouse'
+      language: 'si'
+
+  - item:
+      filename: islamhouse-pod-te.opml
+      title: 'PodcastIndex.org - IslamHouse - Telugu Podcasts'
+      domain: 'com.islamhouse'
+      language: 'te'
+
+  - item:
+      filename: islamhouse-pod-ug.opml
+      title: 'PodcastIndex.org - IslamHouse - Uighur Podcasts'
+      domain: 'com.islamhouse'
+      language: 'ug'
+
+  - item:
+      filename: islamhouse-pod-tzm.opml
+      title: 'PodcastIndex.org - IslamHouse - Central Atlas Tamazight Podcasts'
+      domain: 'com.islamhouse'
+      language: 'tzm'
+
+  - item:
+      filename: islamhouse-pod-az.opml
+      title: 'PodcastIndex.org - IslamHouse - Azerbaijani Podcasts'
+      domain: 'com.islamhouse'
+      language: 'az'
+
+  - item:
+      filename: islamhouse-pod-hi.opml
+      title: 'PodcastIndex.org - IslamHouse - Hindi Podcasts'
+      domain: 'com.islamhouse'
+      language: 'hi'
+
+  - item:
+      filename: islamhouse-pod-de.opml
+      title: 'PodcastIndex.org - IslamHouse - German Podcasts'
+      domain: 'com.islamhouse'
+      language: 'de'
+
+  - item:
+      filename: islamhouse-pod-ne.opml
+      title: 'PodcastIndex.org - IslamHouse - Nepali (macrolanguage) Podcasts'
+      domain: 'com.islamhouse'
+      language: 'ne'
+
+  - item:
+      filename: islamhouse-pod-ba.opml
+      title: 'PodcastIndex.org - IslamHouse - Bashkir Podcasts'
+      domain: 'com.islamhouse'
+      language: 'ba'
+
+  - item:
+      filename: islamhouse-pod-taq.opml
+      title: 'PodcastIndex.org - IslamHouse - Tamasheq Podcasts'
+      domain: 'com.islamhouse'
+      language: 'taq'
+
+  - item:
+      filename: islamhouse-pod-ce.opml
+      title: 'PodcastIndex.org - IslamHouse - Chechen Podcasts'
+      domain: 'com.islamhouse'
+      language: 'ce'
+
+  - item:
+      filename: islamhouse-pod-ady.opml
+      title: 'PodcastIndex.org - IslamHouse - Adyghe Podcasts'
+      domain: 'com.islamhouse'
+      language: 'ady'
+
+  - item:
+      filename: islamhouse-pod-el.opml
+      title: 'PodcastIndex.org - IslamHouse - Modern Greek (1453-) Podcasts'
+      domain: 'com.islamhouse'
+      language: 'el'
+
+  - item:
+      filename: islamhouse-pod-rw.opml
+      title: 'PodcastIndex.org - IslamHouse - Kinyarwanda Podcasts'
+      domain: 'com.islamhouse'
+      language: 'rw'
+
+  - item:
+      filename: islamhouse-pod-as.opml
+      title: 'PodcastIndex.org - IslamHouse - Assamese Podcasts'
+      domain: 'com.islamhouse'
+      language: 'as'
+
+  - item:
+      filename: islamhouse-pod-ko.opml
+      title: 'PodcastIndex.org - IslamHouse - Korean Podcasts'
+      domain: 'com.islamhouse'
+      language: 'ko'
+
+  - item:
+      filename: islamhouse-pod-mrw.opml
+      title: 'PodcastIndex.org - IslamHouse - Maranao Podcasts'
+      domain: 'com.islamhouse'
+      language: 'mrw'
+
+  - item:
+      filename: islamhouse-pod-cdr.opml
+      title: 'PodcastIndex.org - IslamHouse - Cinda-Regi-Tiyal Podcasts'
+      domain: 'com.islamhouse'
+      language: 'cdr'
+
+  - item:
+      filename: islamhouse-pod-kn.opml
+      title: 'PodcastIndex.org - IslamHouse - Kannada Podcasts'
+      domain: 'com.islamhouse'
+      language: 'kn'
+
+  - item:
+      filename: islamhouse-pod-tt.opml
+      title: 'PodcastIndex.org - IslamHouse - Tatar Podcasts'
+      domain: 'com.islamhouse'
+      language: 'tt'
+
+  - item:
+      filename: islamhouse-pod-bg.opml
+      title: 'PodcastIndex.org - IslamHouse - Bulgarian Podcasts'
+      domain: 'com.islamhouse'
+      language: 'bg'
+
+  - item:
+      filename: islamhouse-pod-nqo.opml
+      title: "PodcastIndex.org - IslamHouse - N'Ko Podcasts"
+      domain: 'com.islamhouse'
+      language: 'nqo'
+
+  - item:
+      filename: islamhouse-pod-hu.opml
+      title: 'PodcastIndex.org - IslamHouse - Hungarian Podcasts'
+      domain: 'com.islamhouse'
+      language: 'hu'
+
+  - item:
+      filename: islamhouse-pod-it.opml
+      title: 'PodcastIndex.org - IslamHouse - Italian Podcasts'
+      domain: 'com.islamhouse'
+      language: 'it'
+
+  - item:
+      filename: islamhouse-pod-ks.opml
+      title: 'PodcastIndex.org - IslamHouse - Kashmiri Podcasts'
+      domain: 'com.islamhouse'
+      language: 'ks'
+
+  - item:
+      filename: islamhouse-pod-ms.opml
+      title: 'PodcastIndex.org - IslamHouse - Malay (macrolanguage) Podcasts'
+      domain: 'com.islamhouse'
+      language: 'ms'
+
+  - item:
+      filename: islamhouse-pod-tk.opml
+      title: 'PodcastIndex.org - IslamHouse - Turkmen Podcasts'
+      domain: 'com.islamhouse'
+      language: 'tk'
+
+
+
+  - item:
+      filename: 100komma7-pod.opml
+      title: 'PodcastIndex.org - Radio 100komma7 Luxembourg - Podcasts'
+      domain: 'lu.100komma7'
+
+  - item:
       filename: 3speak-tv-podcasts.opml
       title: 'PodcastIndex.org - 3Speak.tv - Podcasts'
       domain: 'tv.3speak'
@@ -48,11 +463,215 @@ items:
       title: 'PodcastIndex.org - CCMA Corporació Catalana de Mitjans Audiovisuals - OPML of Podcast feeds'
       domain: 'cat.ccma'
 
+#  - item:
+#      filename: cri-cn-pod.opml
+#      title: 'PodcastIndex.org - ChinaRadio - Podcasts'
+#      domain: 'cn.cri'
+#      section_language: true
+
   - item:
-      filename: cri-cn-pod.opml
-      title: 'PodcastIndex.org - ChinaRadio - Podcasts'
+      filename: cri-cn-pod-ar.opml
+      title: 'PodcastIndex.org - ChinaRadio - Arabic Podcasts'
       domain: 'cn.cri'
-      section_language: true
+      language: 'ar'
+
+  - item:
+      filename: cri-cn-pod-bg.opml
+      title: 'PodcastIndex.org - ChinaRadio - Bulgarian Podcasts'
+      domain: 'cn.cri'
+      language: 'bg'
+
+  - item:
+      filename: cri-cn-pod-ce.opml
+      title: 'PodcastIndex.org - ChinaRadio - Chechen Podcasts'
+      domain: 'cn.cri'
+      language: 'bg'
+
+  - item:
+      filename: cri-cn-pod-de.opml
+      title: 'PodcastIndex.org - ChinaRadio - German Podcasts'
+      domain: 'cn.cri'
+      language: 'de'
+
+  - item:
+      filename: cri-cn-pod-el.opml
+      title: 'PodcastIndex.org - ChinaRadio - Greek Podcasts'
+      domain: 'cn.cri'
+      language: 'el'
+
+  - item:
+      filename: cri-cn-pod-en.opml
+      title: 'PodcastIndex.org - ChinaRadio - Enlish Podcasts'
+      domain: 'cn.cri'
+      language: 'en'
+
+  - item:
+      filename: cri-cn-pod-eo.opml
+      title: 'PodcastIndex.org - ChinaRadio - Esperanto Podcasts'
+      domain: 'cn.cri'
+      language: 'eo'
+
+  - item:
+      filename: cri-cn-pod-es.opml
+      title: 'PodcastIndex.org - ChinaRadio - Spanish Podcasts'
+      domain: 'cn.cri'
+      language: 'es'
+
+  - item:
+      filename: cri-cn-pod-fa.opml
+      title: 'PodcastIndex.org - ChinaRadio - Farsi Podcasts'
+      domain: 'cn.cri'
+      language: 'fa'
+
+  - item:
+      filename: cri-cn-pod-fr.opml
+      title: 'PodcastIndex.org - ChinaRadio - French Podcasts'
+      domain: 'cn.cri'
+      language: 'fr'
+
+  - item:
+      filename: cri-cn-pod-ha.opml
+      title: 'PodcastIndex.org - ChinaRadio - Hausa Podcasts'
+      domain: 'cn.cri'
+      language: 'ha'
+
+  - item:
+      filename: cri-cn-pod-hi.opml
+      title: 'PodcastIndex.org - ChinaRadio - Hindi Podcasts'
+      domain: 'cn.cri'
+      language: 'hi'
+
+  - item:
+      filename: cri-cn-pod-hr.opml
+      title: 'PodcastIndex.org - ChinaRadio - Croatian Podcasts'
+      domain: 'cn.cri'
+      language: 'hr'
+
+  - item:
+      filename: cri-cn-pod-hu.opml
+      title: 'PodcastIndex.org - ChinaRadio - Hungarian Podcasts'
+      domain: 'cn.cri'
+      language: 'hu'
+
+  - item:
+      filename: cri-cn-pod-in.opml
+      title: 'PodcastIndex.org - ChinaRadio - Indonesian Podcasts'
+      domain: 'cn.cri'
+      language: 'in'
+
+  - item:
+      filename: cri-cn-pod-it.opml
+      title: 'PodcastIndex.org - ChinaRadio - Italian Podcasts'
+      domain: 'cn.cri'
+      language: 'it'
+
+  - item:
+      filename: cri-cn-pod-ja.opml
+      title: 'PodcastIndex.org - ChinaRadio - Japanese Podcasts'
+      domain: 'cn.cri'
+      language: 'ja'
+
+  - item:
+      filename: cri-cn-pod-km.opml
+      title: 'PodcastIndex.org - ChinaRadio - Khmer Podcasts'
+      domain: 'cn.cri'
+      language: 'km'
+
+  - item:
+      filename: cri-cn-pod-lo.opml
+      title: 'PodcastIndex.org - ChinaRadio - Laotian Podcasts'
+      domain: 'cn.cri'
+      language: 'lo'
+
+  - item:
+      filename: cri-cn-pod-ms.opml
+      title: 'PodcastIndex.org - ChinaRadio - Bahasa Melayu Podcasts'
+      domain: 'cn.cri'
+      language: 'ms'
+
+  - item:
+      filename: cri-cn-pod-my.opml
+      title: 'PodcastIndex.org - ChinaRadio - Burmese Podcasts'
+      domain: 'cn.cri'
+      language: 'my'
+
+  - item:
+      filename: cri-cn-pod-pl.opml
+      title: 'PodcastIndex.org - ChinaRadio - Polish Podcasts'
+      domain: 'cn.cri'
+      language: 'pl'
+
+  - item:
+      filename: cri-cn-pod-ps.opml
+      title: 'PodcastIndex.org - ChinaRadio - Pashto Podcasts'
+      domain: 'cn.cri'
+      language: 'ps'
+
+  - item:
+      filename: cri-cn-pod-ru.opml
+      title: 'PodcastIndex.org - ChinaRadio - Russian Podcasts'
+      domain: 'cn.cri'
+      language: 'ru'
+
+  - item:
+      filename: cri-cn-pod-sq.opml
+      title: 'PodcastIndex.org - ChinaRadio - Albanian Podcasts'
+      domain: 'cn.cri'
+      language: 'sq'
+
+  - item:
+      filename: cri-cn-pod-sr.opml
+      title: 'PodcastIndex.org - ChinaRadio - Serbian Podcasts'
+      domain: 'cn.cri'
+      language: 'sr'
+
+  - item:
+      filename: cri-cn-pod-sw.opml
+      title: 'PodcastIndex.org - ChinaRadio - Swahili Podcasts'
+      domain: 'cn.cri'
+      language: 'sw'
+
+  - item:
+      filename: cri-cn-pod-ta.opml
+      title: 'PodcastIndex.org - ChinaRadio - Tamil Podcasts'
+      domain: 'cn.cri'
+      language: 'ta'
+
+  - item:
+      filename: cri-cn-pod-th.opml
+      title: 'PodcastIndex.org - ChinaRadio - Thai Podcasts'
+      domain: 'cn.cri'
+      language: 'th'
+
+  - item:
+      filename: cri-cn-pod-tl.opml
+      title: 'PodcastIndex.org - ChinaRadio - Tagalog Podcasts'
+      domain: 'cn.cri'
+      language: 'tl'
+
+  - item:
+      filename: cri-cn-pod-tr.opml
+      title: 'PodcastIndex.org - ChinaRadio - Turkish Podcasts'
+      domain: 'cn.cri'
+      language: 'tr'
+
+  - item:
+      filename: cri-cn-pod-ur.opml
+      title: 'PodcastIndex.org - ChinaRadio - Urdu Podcasts'
+      domain: 'cn.cri'
+      language: 'ur'
+
+  - item:
+      filename: cri-cn-pod-vi.opml
+      title: 'PodcastIndex.org - ChinaRadio - Vietnamese Podcasts'
+      domain: 'cn.cri'
+      language: 'vi'
+
+  - item:
+      filename: cri-cn-pod-zh.opml
+      title: 'PodcastIndex.org - ChinaRadio - Chinese Podcasts'
+      domain: 'cn.cri'
+      language: 'zh'
 
   - item:
       filename: cbc-ca-pod.opml
@@ -64,6 +683,168 @@ items:
       title: 'PodcastIndex.org - Deutsche Welle - Podcasts'
       domain: 'com.dw'
       section_language: true
+
+  - item:
+      filename: deutsche-welle-pod-am.opml
+      title: 'PodcastIndex.org - Deutsche Welle - Amharic Podcasts'
+      domain: 'com.dw'
+      language: 'am'
+
+  - item:
+      filename: deutsche-welle-pod-ar.opml
+      title: 'PodcastIndex.org - Deutsche Welle - Arabic Podcasts'
+      domain: 'com.dw'
+      language: 'ar'
+
+  - item:
+      filename: deutsche-welle-pod-bg.opml
+      title: 'PodcastIndex.org - Deutsche Welle - Bulgarian Podcasts'
+      domain: 'com.dw'
+      language: 'bg'
+
+  - item:
+      filename: deutsche-welle-pod-bn.opml
+      title: 'PodcastIndex.org - Deutsche Welle - Bengali Podcasts'
+      domain: 'com.dw'
+      language: 'bn'
+
+  - item:
+      filename: deutsche-welle-pod-bs.opml
+      title: 'PodcastIndex.org - Deutsche Welle - Bosnian Podcasts'
+      domain: 'com.dw'
+      language: 'bs'
+
+  - item:
+      filename: deutsche-welle-pod-de.opml
+      title: 'PodcastIndex.org - Deutsche Welle - German Podcasts'
+      domain: 'com.dw'
+      language: 'de'
+
+  - item:
+      filename: deutsche-welle-pod-el.opml
+      title: 'PodcastIndex.org - Deutsche Welle - Greek Podcasts'
+      domain: 'com.dw'
+      language: 'el'
+
+  - item:
+      filename: deutsche-welle-pod-en.opml
+      title: 'PodcastIndex.org - Deutsche Welle - English Podcasts'
+      domain: 'com.dw'
+      language: 'en'
+
+  - item:
+      filename: deutsche-welle-pod-es.opml
+      title: 'PodcastIndex.org - Deutsche Welle - Spanish Podcasts'
+      domain: 'com.dw'
+      language: 'es'
+
+  - item:
+      filename: deutsche-welle-pod-fa.opml
+      title: 'PodcastIndex.org - Deutsche Welle - Farsi Podcasts'
+      domain: 'com.dw'
+      language: 'fa'
+
+  - item:
+      filename: deutsche-welle-pod-fr.opml
+      title: 'PodcastIndex.org - Deutsche Welle - French Podcasts'
+      domain: 'com.dw'
+      language: 'fr'
+
+  - item:
+      filename: deutsche-welle-pod-ha.opml
+      title: 'PodcastIndex.org - Deutsche Welle - Hausa Podcasts'
+      domain: 'com.dw'
+      language: 'ha'
+
+  - item:
+      filename: deutsche-welle-pod-hi.opml
+      title: 'PodcastIndex.org - Deutsche Welle - Hindi Podcasts'
+      domain: 'com.dw'
+      language: 'hi'
+
+  - item:
+      filename: deutsche-welle-pod-hr.opml
+      title: 'PodcastIndex.org - Deutsche Welle - Croatian Podcasts'
+      domain: 'com.dw'
+      language: 'hr'
+
+  - item:
+      filename: deutsche-welle-pod-id.opml
+      title: 'PodcastIndex.org - Deutsche Welle - Indonesian Podcasts'
+      domain: 'com.dw'
+      language: 'id'
+
+  - item:
+      filename: deutsche-welle-pod-mk.opml
+      title: 'PodcastIndex.org - Deutsche Welle - Macedonian Podcasts'
+      domain: 'com.dw'
+      language: 'mk'
+
+  - item:
+      filename: deutsche-welle-pod-pl.opml
+      title: 'PodcastIndex.org - Deutsche Welle - Polish Podcasts'
+      domain: 'com.dw'
+      language: 'pl'
+
+  - item:
+      filename: deutsche-welle-pod-pt.opml
+      title: 'PodcastIndex.org - Deutsche Welle - Portugese Podcasts'
+      domain: 'com.dw'
+      language: 'pt'
+
+  - item:
+      filename: deutsche-welle-pod-ro.opml
+      title: 'PodcastIndex.org - Deutsche Welle - Romanian Podcasts'
+      domain: 'com.dw'
+      language: 'ro'
+
+  - item:
+      filename: deutsche-welle-pod-ru.opml
+      title: 'PodcastIndex.org - Deutsche Welle - Russian Podcasts'
+      domain: 'com.dw'
+      language: 'ru'
+
+  - item:
+      filename: deutsche-welle-pod-sq.opml
+      title: 'PodcastIndex.org - Deutsche Welle - Albanian Podcasts'
+      domain: 'com.dw'
+      language: 'sq'
+
+  - item:
+      filename: deutsche-welle-pod-sr.opml
+      title: 'PodcastIndex.org - Deutsche Welle - Serbian Podcasts'
+      domain: 'com.dw'
+      language: 'sr'
+
+  - item:
+      filename: deutsche-welle-pod-sw.opml
+      title: 'PodcastIndex.org - Deutsche Welle - Swahili Podcasts'
+      domain: 'com.dw'
+      language: 'sw'
+
+  - item:
+      filename: deutsche-welle-pod-tr.opml
+      title: 'PodcastIndex.org - Deutsche Welle - Turkish Podcasts'
+      domain: 'com.dw'
+      language: 'tr'
+
+  - item:
+      filename: deutsche-welle-pod-uk.opml
+      title: 'PodcastIndex.org - Deutsche Welle - Ukrainian Podcasts'
+      domain: 'com.dw'
+      language: 'uk'
+
+  - item:
+      filename: deutsche-welle-pod-ur.opml
+      title: 'PodcastIndex.org - Deutsche Welle - Urdu Podcasts'
+      domain: 'com.dw'
+      language: 'ur'
+
+  - item:
+      filename: deutsche-welle-pod-zh.opml
+      title: 'PodcastIndex.org - Deutsche Welle - Chinese Podcasts'
+      domain: 'com.dw'
+      language: 'zh'
 
   - item:
       filename: deutschlandfunk-pod.opml
@@ -418,16 +1199,6 @@ items:
       title: 'PodcastIndex.org - Voice of America - Korea 한국어 Podcasts'
       domain: 'com.voakorea'
 
-#  - item:
-#      filename: voa-lao-pod.opml
-#      title: 'PodcastIndex.org - Voice of America - Lao Podcasts'
-#      domain: 'com.voanews.lao'
-
-#  - item:
-#      filename: voa-noticias-pod.opml
-#      title: 'PodcastIndex.org - Voice of America - Español Podcasts'
-#      domain: 'com.voanoticias'
-
   - item:
       filename: voa-nouvel-pod.opml
       title: 'PodcastIndex.org - Voice of America - Creole Podcasts'
@@ -464,20 +1235,10 @@ items:
       title: 'PodcastIndex.org - Voice of America - Tiếng Việt Podcasts'
       domain: 'com.voatiengviet'
 
-#  - item:
-#      filename: voa-tigrigna-pod.opml
-#      title: 'PodcastIndex.org - Voice of America - Tigrigna Podcasts'
-#      domain: 'com.voanews.tigrigna'
-
   - item:
       filename: voa-zimbabwe-pod.opml
       title: 'PodcastIndex.org - Voice of America - Zimbabwe Podcasts'
       domain: 'com.voazimbabwe'
-
-#  - item:
-#      filename: voa-dari-pod.opml
-#      title: 'PodcastIndex.org - Voice of America - Dari Podcasts'
-#      domain: 'com.darivoa'
 
   - item:
       filename: voa-pashto-pod.opml
@@ -498,49 +1259,6 @@ items:
       filename: voa-zeriamerikes-pod.opml
       title: 'PodcastIndex.org - Voice of America - Zëri Amerikës Podcasts'
       domain: 'com.zeriamerikes'
-
-#  - item:
-#      filename: voa-all-languages-podcasts.opml
-#      title: 'PodcastIndex.org - Voice of America - Multilingual'
-#      domain:
-#      - com.amerikaovozi
-#      - com.darivoa
-#      - com.pashtovoa
-#      - com.radiyoyacuvoa
-#      - com.urduvoa
-#      - com.voaafaanoromoo
-#      - com.voaafrique
-#      - com.voabambara
-#      - com.voabangla
-#      - com.voacambodia
-#      - com.voacantonese
-#      - com.voachinese
-#      - com.voadeewanews
-#      - com.voahausa
-#      - com.voaindonesia
-#      - com.voakorea
-#      - com.voandebele
-#      - com.voanews
-#      - com.voanews.amharic
-#      - com.voanews.burmese
-#      - com.voanews.khmer
-#      - com.voanews.lao
-#      - com.voanews.learningenglish
-#      - com.voanews.tigrigna
-#      - com.voanoticias
-#      - com.voanouvel
-#      - com.voaportugues
-#      - com.voashona
-#      - com.voasomali
-#      - com.voaswahili
-#      - com.voathai
-#      - com.voatibetan
-#      - com.voatibetanenglish
-#      - com.voatiengviet
-#      - com.voazimbabwe
-#      - com.zeriamerikes
-#      - org.amerikaninsesi
-#      section_language: true
 
 
   - item:
@@ -564,4 +1282,3 @@ items:
       title: 'PodcastIndex.org - Radio Free Europe / Radio Liberty Podcasts'
       domain: 'org.rferl'
 
-...

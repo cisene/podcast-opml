@@ -146,13 +146,17 @@ def LookupLanguage(language):
 
 def LoadYamlConfig(filepath):
   global config
-  with open(filepath, 'r') as stream:
-    try:
-      config = yaml.safe_load(stream)
-    except yaml.YAMLError as exc:
-      print(exc)
+  if os.path.isfile(filepath):
+    with open(filepath, 'r') as stream:
+      try:
+        config = yaml.safe_load(stream)
+      except yaml.YAMLError as exc:
+        print(exc)
+  else:
+    print(f"{filepath} was not found")
 
 def ProcessItems(outputfolder):
+  global config
   #print(config)
   for item in config['items']:
     do_language_sections = False
@@ -163,12 +167,29 @@ def ProcessItems(outputfolder):
     # sqlfilter = item['item']['filter']
     sort_domain = str(item['item']['domain'])
 
+    language = None
+    language_id = None
+
     if "section_language" in item['item']:
       if item['item']['section_language'] == True:
         do_language_sections = True
 
+    if "language" in item['item']:
+      if item['item']['language'] != None:
+        language = item['item']['language']
+
     if sort_domain == "":
       continue
+
+    if language != None:
+      query = f"SELECT language_id FROM podmix.languages WHERE language_id >= 10000 AND language_code = '{language}' LIMIT 1;"
+      #print(query)
+
+      cur_channel.execute(query)
+      rowcount = cur_channel.rowcount
+      if int(rowcount) > 0:
+        for (language_id) in cur_channel:
+          language_id = language_id[0]
 
     # Translate list into variable for IN() statement
     sort_domain = re.sub(r"\x2c", "','", str(sort_domain), re.IGNORECASE)
@@ -176,30 +197,6 @@ def ProcessItems(outputfolder):
     output = ''
     section_old = ''
     line_count = 0
-
-    query = "" \
-      "SELECT " \
-      "    c.channel_title, " \
-      "    c.channel_feed_link, " \
-      "    c.channel_link, " \
-      "    LOWER(CASE WHEN '' THEN 'en' ELSE LEFT(c.channel_language,2) END) AS channel_language " \
-      "FROM " \
-      "  podmix.channels c " \
-      "WHERE " \
-      "  sort_domain IN ('" + sort_domain + "') " \
-      "AND " \
-      "  c.channel_deleted = 0 " \
-      "AND " \
-      "  c.channel_title NOT IN ('','None') " \
-      "AND " \
-      "  c.channel_touch > 0 " \
-      "AND " \
-      "  c.channel_feed_link LIKE 'http%' " \
-      "ORDER BY " \
-      "  c.channel_language ASC, " \
-      "    c.channel_title ASC " \
-      "LIMIT 100000;"
-
 
     query = "" \
       "SELECT" \
@@ -229,6 +226,14 @@ def ProcessItems(outputfolder):
       "    c.channel_language ASC, " \
       "    c.channel_title ASC " \
       "LIMIT 100000; "
+
+    if language_id == None:
+      query = f"SELECT c.channel_title, c.channel_feed_link, c.channel_link, LOWER(CASE WHEN '' THEN 'en' ELSE LEFT(c.channel_language,2) END) AS channel_language, CASE WHEN (LENGTH(l.native_caption) = 0 OR l.native_caption = l.language_caption) THEN l.language_caption ELSE CONCAT(l.native_caption, ' (', l.language_caption, ')') END AS caption FROM podmix.channels c LEFT JOIN podmix.languages l ON l.language_id = c.channel_language_id WHERE channel_domain IN ('{sort_domain}') AND l.language_id IS NOT NULL AND (c.channel_language_id >= 10000 OR c.channel_language_id = 0) AND c.channel_deleted = 0 AND c.channel_title NOT IN ('','None') AND c.channel_touch > 0 AND c.channel_feed_link LIKE 'http%' ORDER BY c.channel_language ASC, c.channel_title ASC LIMIT 100000;"
+
+    else:
+      query = f"SELECT c.channel_title, c.channel_feed_link, c.channel_link, LOWER(CASE WHEN '' THEN 'en' ELSE LEFT(c.channel_language,2) END) AS channel_language, CASE WHEN (LENGTH(l.native_caption) = 0 OR l.native_caption = l.language_caption) THEN l.language_caption ELSE CONCAT(l.native_caption, ' (', l.language_caption, ')') END AS caption FROM podmix.channels c LEFT JOIN podmix.languages l ON l.language_id = c.channel_language_id WHERE c.channel_deleted = 0 AND c.channel_touch > 0 AND l.language_id IS NOT NULL AND channel_domain IN ('{sort_domain}') AND c.channel_language_id = {language_id} AND c.channel_title NOT IN ('','None') AND c.channel_feed_link LIKE 'http%' ORDER BY c.channel_language ASC, c.channel_title ASC LIMIT 100000;"
+
+    #print(query)
 
     cur_channel.execute(query)
     rowcount = cur_channel.rowcount
@@ -456,6 +461,7 @@ def main() -> None:
     TARGET_FOLDER = './'
 
     LoadYamlConfig('./yaml/podmix-opml.yaml')
+    #LoadYamlConfig('../yaml/podmix-opml.yaml')
     
 
     ClearFolder(TARGET_FOLDER)
