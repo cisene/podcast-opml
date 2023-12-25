@@ -975,11 +975,77 @@ items:
       title: 'PodcastIndex.org - Radio Dreyeckland - Podcasts'
       domain: 'de.rdl'
 
+  # - item:
+  #     filename: rfi-fr-pod.opml
+  #     title: 'PodcastIndex.org - RFI.fr - Podcasts'
+  #     domain: 'fr.rfi'
+  #     section_language: true
+
   - item:
-      filename: rfi-fr-pod.opml
-      title: 'PodcastIndex.org - RFI.fr - Podcasts'
+      filename: rfi-fr-pod-fr.opml
+      title: 'PodcastIndex.org - RFI.fr - French Podcasts'
       domain: 'fr.rfi'
-      section_language: true
+      language: 'fr'
+
+  - item:
+      filename: rfi-fr-pod-en.opml
+      title: 'PodcastIndex.org - RFI.fr - English Podcasts'
+      domain: 'fr.rfi'
+      language: 'en'
+
+  - item:
+      filename: rfi-fr-pod-es.opml
+      title: 'PodcastIndex.org - RFI.fr - Spanish Podcasts'
+      domain: 'fr.rfi'
+      language: 'es'
+
+  - item:
+      filename: rfi-fr-pod-fa.opml
+      title: 'PodcastIndex.org - RFI.fr - Farsi Podcasts'
+      domain: 'fr.rfi'
+      language: 'fa'
+
+  - item:
+      filename: rfi-fr-pod-ha.opml
+      title: 'PodcastIndex.org - RFI.fr - Hausa Podcasts'
+      domain: 'fr.rfi'
+      language: 'ha'
+
+  - item:
+      filename: rfi-fr-pod-km.opml
+      title: 'PodcastIndex.org - RFI.fr - Khmer Podcasts'
+      domain: 'fr.rfi'
+      language: 'km'
+
+  - item:
+      filename: rfi-fr-pod-pt.opml
+      title: 'PodcastIndex.org - RFI.fr - Portugese Podcasts'
+      domain: 'fr.rfi'
+      language: 'pt'
+
+  - item:
+      filename: rfi-fr-pod-ru.opml
+      title: 'PodcastIndex.org - RFI.fr - Russian Podcasts'
+      domain: 'fr.rfi'
+      language: 'ru'
+
+  - item:
+      filename: rfi-fr-pod-sw.opml
+      title: 'PodcastIndex.org - RFI.fr - Swahili Podcasts'
+      domain: 'fr.rfi'
+      language: 'sw'
+
+  - item:
+      filename: rfi-fr-pod-vi.opml
+      title: 'PodcastIndex.org - RFI.fr - Vietnamese Podcasts'
+      domain: 'fr.rfi'
+      language: 'vi'
+
+  - item:
+      filename: rfi-fr-pod-zh.opml
+      title: 'PodcastIndex.org - RFI.fr - Chinese Podcasts'
+      domain: 'fr.rfi'
+      language: 'zh'
 
   - item:
       filename: rfi-ro-pod.opml
