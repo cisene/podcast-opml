@@ -890,11 +890,215 @@ items:
       domain: 'lv.lsm'
       section_language: true
 
-  - item:
-      filename: librivox-pod.opml
-      title: 'PodcastIndex.org - Librivox - Podcasts'
-      domain: 'org.librivox'
-      section_language: true
+#  - item:
+#      filename: librivox-pod.opml
+#      title: 'PodcastIndex.org - Librivox - Podcasts'
+#      domain: 'org.librivox'
+#      section_language: true
+
+- item:
+    filename: librivox-pod-en.opml
+    title: 'PodcastIndex.org - Librivox - English Podcasts'
+    domain: 'org.librivox'
+    language: 'en'
+
+- item:
+    filename: librivox-pod-de.opml
+    title: 'PodcastIndex.org - Librivox - German Podcasts'
+    domain: 'org.librivox'
+    language: 'de'
+
+- item:
+    filename: librivox-pod-fr.opml
+    title: 'PodcastIndex.org - Librivox - French Podcasts'
+    domain: 'org.librivox'
+    language: 'fr'
+
+- item:
+    filename: librivox-pod-nl.opml
+    title: 'PodcastIndex.org - Librivox - Dutch Podcasts'
+    domain: 'org.librivox'
+    language: 'nl'
+
+- item:
+    filename: librivox-pod-it.opml
+    title: 'PodcastIndex.org - Librivox - Italian Podcasts'
+    domain: 'org.librivox'
+    language: 'it'
+
+- item:
+    filename: librivox-pod-ru.opml
+    title: 'PodcastIndex.org - Librivox - Russian Podcasts'
+    domain: 'org.librivox'
+    language: 'ru'
+
+- item:
+    filename: librivox-pod-ja.opml
+    title: 'PodcastIndex.org - Librivox - Japanese Podcasts'
+    domain: 'org.librivox'
+    language: 'ja'
+
+- item:
+    filename: librivox-pod-zh.opml
+    title: 'PodcastIndex.org - Librivox - Chinese Podcasts'
+    domain: 'org.librivox'
+    language: 'zh'
+
+- item:
+    filename: librivox-pod-el.opml
+    title: 'PodcastIndex.org - Librivox - Greek Podcasts'
+    domain: 'org.librivox'
+    language: 'el'
+
+- item:
+    filename: librivox-pod-he.opml
+    title: 'PodcastIndex.org - Librivox - Hebrew Podcasts'
+    domain: 'org.librivox'
+    language: 'he'
+
+- item:
+    filename: librivox-pod-la.opml
+    title: 'PodcastIndex.org - Librivox - Latin Podcasts'
+    domain: 'org.librivox'
+    language: 'la'
+
+- item:
+    filename: librivox-pod-fi.opml
+    title: 'PodcastIndex.org - Librivox - Finnish Podcasts'
+    domain: 'org.librivox'
+    language: 'fi'
+
+- item:
+    filename: librivox-pod-sw.opml
+    title: 'PodcastIndex.org - Librivox - Swahili (macrolanguage) Podcasts'
+    domain: 'org.librivox'
+    language: 'sw'
+
+- item:
+    filename: librivox-pod-da.opml
+    title: 'PodcastIndex.org - Librivox - Danish Podcasts'
+    domain: 'org.librivox'
+    language: 'da'
+
+- item:
+    filename: librivox-pod-ca.opml
+    title: 'PodcastIndex.org - Librivox - Catalan Podcasts'
+    domain: 'org.librivox'
+    language: 'ca'
+
+- item:
+    filename: librivox-pod-ch.opml
+    title: 'PodcastIndex.org - Librivox - Chamorro Podcasts'
+    domain: 'org.librivox'
+    language: 'ch'
+
+- item:
+    filename: librivox-pod-tg.opml
+    title: 'PodcastIndex.org - Librivox - Tajik Podcasts'
+    domain: 'org.librivox'
+    language: 'tg'
+
+- item:
+    filename: librivox-pod-ko.opml
+    title: 'PodcastIndex.org - Librivox - Korean Podcasts'
+    domain: 'org.librivox'
+    language: 'ko'
+
+- item:
+    filename: librivox-pod-ro.opml
+    title: 'PodcastIndex.org - Librivox - Romanian Podcasts'
+    domain: 'org.librivox'
+    language: 'ro'
+
+- item:
+    filename: librivox-pod-uk.opml
+    title: 'PodcastIndex.org - Librivox - Ukrainian Podcasts'
+    domain: 'org.librivox'
+    language: 'uk'
+
+- item:
+    filename: librivox-pod-ar.opml
+    title: 'PodcastIndex.org - Librivox - Arabic Podcasts'
+    domain: 'org.librivox'
+    language: 'ar'
+
+- item:
+    filename: librivox-pod-ce.opml
+    title: 'PodcastIndex.org - Librivox - Chechen Podcasts'
+    domain: 'org.librivox'
+    language: 'ce'
+
+- item:
+    filename: librivox-pod-hu.opml
+    title: 'PodcastIndex.org - Librivox - Hungarian Podcasts'
+    domain: 'org.librivox'
+    language: 'hu'
+
+- item:
+    filename: librivox-pod-ta.opml
+    title: 'PodcastIndex.org - Librivox - Tamil Podcasts'
+    domain: 'org.librivox'
+    language: 'ta'
+
+- item:
+    filename: librivox-pod-an.opml
+    title: 'PodcastIndex.org - Librivox - Aragonese Podcasts'
+    domain: 'org.librivox'
+    language: 'an'
+
+- item:
+    filename: librivox-pod-fa.opml
+    title: 'PodcastIndex.org - Librivox - Persian/Farsi Podcasts'
+    domain: 'org.librivox'
+    language: 'fa'
+
+- item:
+    filename: librivox-pod-hr.opml
+    title: 'PodcastIndex.org - Librivox - Croatian Podcasts'
+    domain: 'org.librivox'
+    language: 'hr'
+
+- item:
+    filename: librivox-pod-lt.opml
+    title: 'PodcastIndex.org - Librivox - Lithuanian Podcasts'
+    domain: 'org.librivox'
+    language: 'lt'
+
+- item:
+    filename: librivox-pod-lu.opml
+    title: 'PodcastIndex.org - Librivox - Luba-Katanga Podcasts'
+    domain: 'org.librivox'
+    language: 'lu'
+
+- item:
+    filename: librivox-pod-mk.opml
+    title: 'PodcastIndex.org - Librivox - Macedonian Podcasts'
+    domain: 'org.librivox'
+    language: 'mk'
+
+- item:
+    filename: librivox-pod-mr.opml
+    title: 'PodcastIndex.org - Librivox - Marathi Podcasts'
+    domain: 'org.librivox'
+    language: 'mr'
+
+- item:
+    filename: librivox-pod-no.opml
+    title: 'PodcastIndex.org - Librivox - Norwegian Podcasts'
+    domain: 'org.librivox'
+    language: 'no'
+
+- item:
+    filename: librivox-pod-te.opml
+    title: 'PodcastIndex.org - Librivox - Telugu Podcasts'
+    domain: 'org.librivox'
+    language: 'te'
+
+- item:
+    filename: librivox-pod-ur.opml
+    title: 'PodcastIndex.org - Librivox - Urdu Podcasts'
+    domain: 'org.librivox'
+    language: 'ur'
 
   - item:
       filename: livesportscaster-pod.opml
