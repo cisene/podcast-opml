@@ -1183,11 +1183,197 @@ items:
       title: 'PodcastIndex.org - UR Utbildningsradion - Podcasts'
       domain: 'se.ur'
 
+  # - item:
+  #     filename: vaticannews.opml
+  #     title: 'PodcastIndex.org - Vatican News - Podcasts'
+  #     domain: 'va.vaticannews'
+  #     section_language: true
+
   - item:
-      filename: vaticannews.opml
-      title: 'PodcastIndex.org - Vatican News - Podcasts'
+      filename: vaticannews-ar.opml
+      title: 'PodcastIndex.org - Vatican News - Arabic Podcasts'
       domain: 'va.vaticannews'
-      section_language: true
+      language: 'ar'
+
+  - item:
+      filename: vaticannews-be.opml
+      title: 'PodcastIndex.org - Vatican News - Belarusian Podcasts'
+      domain: 'va.vaticannews'
+      language: 'be'
+
+  - item:
+      filename: vaticannews-bg.opml
+      title: 'PodcastIndex.org - Vatican News - Bulgarian Podcasts'
+      domain: 'va.vaticannews'
+      language: 'bg'
+
+  - item:
+      filename: vaticannews-cs.opml
+      title: 'PodcastIndex.org - Vatican News - Czech Podcasts'
+      domain: 'va.vaticannews'
+      language: 'cs'
+
+  - item:
+      filename: vaticannews-de.opml
+      title: 'PodcastIndex.org - Vatican News - German Podcasts'
+      domain: 'va.vaticannews'
+      language: 'de'
+
+  - item:
+      filename: vaticannews-en.opml
+      title: 'PodcastIndex.org - Vatican News - English Podcasts'
+      domain: 'va.vaticannews'
+      language: 'en'
+
+  - item:
+      filename: vaticannews-eo.opml
+      title: 'PodcastIndex.org - Vatican News - Esperanto Podcasts'
+      domain: 'va.vaticannews'
+      language: 'eo'
+
+  - item:
+      filename: vaticannews-es.opml
+      title: 'PodcastIndex.org - Vatican News - Spanish Podcasts'
+      domain: 'va.vaticannews'
+      language: 'es'
+
+  - item:
+      filename: vaticannews-fr.opml
+      title: 'PodcastIndex.org - Vatican News - French Podcasts'
+      domain: 'va.vaticannews'
+      language: 'fr'
+
+  - item:
+      filename: vaticannews-hi.opml
+      title: 'PodcastIndex.org - Vatican News - Hindi Podcasts'
+      domain: 'va.vaticannews'
+      language: 'hi'
+
+  - item:
+      filename: vaticannews-hr.opml
+      title: 'PodcastIndex.org - Vatican News - Croatian Podcasts'
+      domain: 'va.vaticannews'
+      language: 'hr'
+
+  - item:
+      filename: vaticannews-hu.opml
+      title: 'PodcastIndex.org - Vatican News - Hungarian Podcasts'
+      domain: 'va.vaticannews'
+      language: 'hu'
+
+  - item:
+      filename: vaticannews-hy.opml
+      title: 'PodcastIndex.org - Vatican News - Armenian Podcasts'
+      domain: 'va.vaticannews'
+      language: 'hy'
+
+  - item:
+      filename: vaticannews-it.opml
+      title: 'PodcastIndex.org - Vatican News - Italian Podcasts'
+      domain: 'va.vaticannews'
+      language: 'it'
+
+  - item:
+      filename: vaticannews-la.opml
+      title: 'PodcastIndex.org - Vatican News - Latin Podcasts'
+      domain: 'va.vaticannews'
+      language: 'la'
+
+  - item:
+      filename: vaticannews-lt.opml
+      title: 'PodcastIndex.org - Vatican News - Lithuanian Podcasts'
+      domain: 'va.vaticannews'
+      language: 'lt'
+
+  - item:
+      filename: vaticannews-lv.opml
+      title: 'PodcastIndex.org - Vatican News - Latvian Podcasts'
+      domain: 'va.vaticannews'
+      language: 'lv'
+
+  - item:
+      filename: vaticannews-ml.opml
+      title: 'PodcastIndex.org - Vatican News - Malayalam Podcasts'
+      domain: 'va.vaticannews'
+      language: 'ml'
+
+  - item:
+      filename: vaticannews-pl.opml
+      title: 'PodcastIndex.org - Vatican News - Polish Podcasts'
+      domain: 'va.vaticannews'
+      language: 'pl'
+
+  - item:
+      filename: vaticannews-pt.opml
+      title: 'PodcastIndex.org - Vatican News - Portugese Podcasts'
+      domain: 'va.vaticannews'
+      language: 'pt'
+
+  - item:
+      filename: vaticannews-ro.opml
+      title: 'PodcastIndex.org - Vatican News - Romanian Podcasts'
+      domain: 'va.vaticannews'
+      language: 'ro'
+
+  - item:
+      filename: vaticannews-ru.opml
+      title: 'PodcastIndex.org - Vatican News - Russian Podcasts'
+      domain: 'va.vaticannews'
+      language: 'ru'
+
+  - item:
+      filename: vaticannews-sk.opml
+      title: 'PodcastIndex.org - Vatican News - Slovak Podcasts'
+      domain: 'va.vaticannews'
+      language: 'sk'
+
+  - item:
+      filename: vaticannews-sl.opml
+      title: 'PodcastIndex.org - Vatican News - Slovenian Podcasts'
+      domain: 'va.vaticannews'
+      language: 'sl'
+
+  - item:
+      filename: vaticannews-sq.opml
+      title: 'PodcastIndex.org - Vatican News - Albanian Podcasts'
+      domain: 'va.vaticannews'
+      language: 'sq'
+
+  - item:
+      filename: vaticannews-sv.opml
+      title: 'PodcastIndex.org - Vatican News - Swedish Podcasts'
+      domain: 'va.vaticannews'
+      language: 'sv'
+
+  - item:
+      filename: vaticannews-sw.opml
+      title: 'PodcastIndex.org - Vatican News - Swahili Podcasts'
+      domain: 'va.vaticannews'
+      language: 'sw'
+
+  - item:
+      filename: vaticannews-ta.opml
+      title: 'PodcastIndex.org - Vatican News - Tamil Podcasts'
+      domain: 'va.vaticannews'
+      language: 'ta'
+
+  - item:
+      filename: vaticannews-uk.opml
+      title: 'PodcastIndex.org - Vatican News - Ukrainian Podcasts'
+      domain: 'va.vaticannews'
+      language: 'uk'
+
+  - item:
+      filename: vaticannews-vi.opml
+      title: 'PodcastIndex.org - Vatican News - Vietnamese Podcasts'
+      domain: 'va.vaticannews'
+      language: 'vi'
+
+  - item:
+      filename: vaticannews-zh.opml
+      title: 'PodcastIndex.org - Vatican News - Chinese Podcasts'
+      domain: 'va.vaticannews'
+      language: 'zh'
 
   - item:
       filename: voa-ndebele-pod.opml
