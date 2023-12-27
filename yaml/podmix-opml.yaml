@@ -890,12 +890,6 @@ items:
       domain: 'lv.lsm'
       section_language: true
 
-#  - item:
-#      filename: librivox-pod.opml
-#      title: 'PodcastIndex.org - Librivox - Podcasts'
-#      domain: 'org.librivox'
-#      section_language: true
-
 - item:
     filename: librivox-pod-en.opml
     title: 'PodcastIndex.org - Librivox - English Podcasts'
