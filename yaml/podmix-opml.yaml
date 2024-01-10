@@ -1701,11 +1701,11 @@ items:
       title: 'PodcastIndex.org - Yle.fi - Podcasts'
       domain: 'fi.yle'
 
-  - item:
-      filename: islamhouse-pod.opml
-      title: 'PodcastIndex.org - IslamHouse - Podcasts'
-      domain: 'com.islamhouse'
-      section_language: true
+#  - item:
+#      filename: islamhouse-pod.opml
+#      title: 'PodcastIndex.org - IslamHouse - Podcasts'
+#      domain: 'com.islamhouse'
+#      section_language: true
 
   - item:
       filename: rferl-pod.opml
