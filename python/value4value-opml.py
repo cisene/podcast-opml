@@ -95,6 +95,9 @@ def readFile(filepath):
 
 def urlEncode(data):
   data = re.sub(r"\x26", "&amp;", str(data), flags=re.IGNORECASE)
+  data = re.sub(r"\x3c", "%3C", str(data), flags=re.IGNORECASE)
+  data = re.sub(r"\x3e", "%3E", str(data), flags=re.IGNORECASE)
+  
   return data
 
 def htmlEncode(data):
