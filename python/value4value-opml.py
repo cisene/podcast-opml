@@ -353,7 +353,7 @@ def renderCategoriesToOPML(idx):
       category_filename = cat.lower()
       category_filename = re.sub(r"\x20", "-", str(category_filename), flags=re.IGNORECASE)
 
-      filepath = f"./podcastindex-org-podcasting-2.0-category-{category_filename}.opml"
+      filepath = f"./podcastindex-org-Value4Value-category-{category_filename}.opml"
       opml_url = re.sub(r"^\x2e\x2f", "", str(filepath), flags=re.IGNORECASE)
       print(f"Working on {filepath}")
 
