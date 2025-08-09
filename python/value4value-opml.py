@@ -364,7 +364,7 @@ def renderCategoriesToOPML(idx):
       stack.append(f"<!-- Source: https://b19.se/data/opml/podcastindex/{opml_url} -->")
       stack.append(f"<opml version=\"2.0\" xmlns:podcast=\"https://github.com/Podcastindex-org/podcast-namespace/blob/main/docs/1.0.md\">")
       stack.append(f"  <head>")
-      stack.append(f"    <title>Podcasting 2.0 - Category '{cat}'</title>")
+      stack.append(f"    <title>Podcasting 2.0 - Value4Value Category '{cat}'</title>")
       stack.append(f"    <dateCreated>{formatDateString(dateNow())} +0100</dateCreated>")
       stack.append(f"    <dateModified>{formatDateString(dateNow())} +0100</dateModified>")
       stack.append(f"    <ownerName>PodcastIndex.org</ownerName>")
@@ -378,21 +378,21 @@ def renderCategoriesToOPML(idx):
         if "type" in feed:
           if feed['type'] != None:
             #item_stack.append(f"type=\"{feed['type']}\"")
-            item_stack.append(f"type=\"rss\"")
+            item_stack.append(f"type=\"link\"")
 
         if "version" in feed:
           if feed['version'] != None:
             #item_stack.append(f"version=\"{feed['version']}\"")
-            item_stack.append(f"version=\"RSS2\"")
+            item_stack.append(f"version=\"RSS\"")
 
         if "language" in feed:
           if feed['language'] != None:
             item_language = snipLanguage(feed['language'])
             item_stack.append(f"language=\"{item_language}\"")
 
-        if "feedGuid" in feed:
-          if feed['feedGuid'] != None:
-            item_stack.append(f"podcast:feedGuid=\"{feed['feedGuid']}\"")
+        #if "feedGuid" in feed:
+        #  if feed['feedGuid'] != None:
+        #    item_stack.append(f"podcast:feedGuid=\"{feed['feedGuid']}\"")
 
         if "xmlurl" in feed:
           if feed['xmlurl'] != None:
@@ -414,10 +414,10 @@ def renderCategoriesToOPML(idx):
             item_text = htmlEncode(fullTrim(feed['text']))
             item_stack.append(f"text=\"{item_text}\"")
 
-        if "description" in feed:
-          if feed['description'] != None:
-            item_description = htmlEncode(fullTrim(feed['description']))
-            item_stack.append(f"description=\"{item_description}\"")
+        #if "description" in feed:
+        #  if feed['description'] != None:
+        #    item_description = htmlEncode(fullTrim(feed['description']))
+        #    item_stack.append(f"description=\"{item_description}\"")
 
         if len(item_stack) > 0:
           item_contents = " ".join(item_stack)
