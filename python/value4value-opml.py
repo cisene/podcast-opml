@@ -316,6 +316,7 @@ def fetchIndex(headers):
               'xmlurl': obj['url'],
               'htmlUrl': obj['link'],
               'description': obj['description'],
+              'image': obj['image'],
               'type': 'link',
               'version': 'RSS',
             }
@@ -403,6 +404,11 @@ def renderCategoriesToOPML(idx):
           if feed['htmlUrl'] != None:
             item_htmlUrl = urlEncode(feed['htmlUrl'])
             item_stack.append(f"htmlUrl=\"{item_htmlUrl}\"")
+
+        if "image" in feed:
+          if feed['image'] != None:
+            item_imgUrl = urlEncode(feed['image'])
+            item_stack.append(f"image\"{item_imgUrl}\"")
 
         if "title" in feed:
           if feed['title'] != None:
