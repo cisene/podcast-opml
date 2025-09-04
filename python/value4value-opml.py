@@ -408,7 +408,7 @@ def renderCategoriesToOPML(idx):
         if "image" in feed:
           if feed['image'] != None:
             item_imgUrl = urlEncode(feed['image'])
-            item_stack.append(f"image\"{item_imgUrl}\"")
+            item_stack.append(f"image=\"{item_imgUrl}\"")
 
         if "title" in feed:
           if feed['title'] != None:
