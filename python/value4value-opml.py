@@ -15,6 +15,9 @@ import hashlib
 
 from xml.etree.ElementTree import Element, SubElement, Comment
 
+from lxml import etree
+
+
 class APIAuthorization:
 
   api_key = ''
@@ -73,6 +76,12 @@ class APIAuthorization:
 USER_AGENT = 'Mozilla/5.0 (PodcastIndex.Org - OPML/@cisene@podcastindex.social)'
 
 PODCASTING20_STATE = './pc20-index.json'
+
+def writeOPML(filepath, contents):
+  s = "\n".join(contents) + "\n"
+  with open(filepath, "w") as f:
+    f.write(contents)
+
 
 def writeFile(filepath, contents):
   f = open(filepath,"w+")
@@ -360,85 +369,116 @@ def renderCategoriesToOPML(idx):
 
       feeds = idx[cat]
 
-      stack = []
-      stack.append(f"<?xml version=\"1.0\" encoding=\"UTF-8\"?>")
-      stack.append(f"<!-- Source: https://b19.se/data/opml/podcastindex/{opml_url} -->")
-      stack.append(f"<opml version=\"2.0\" xmlns:podcast=\"https://github.com/Podcastindex-org/podcast-namespace/blob/main/docs/1.0.md\">")
-      stack.append(f"  <head>")
-      stack.append(f"    <title>Podcasting 2.0 - Value4Value Category '{cat}'</title>")
-      stack.append(f"    <dateCreated>{formatDateString(dateNow())} +0100</dateCreated>")
-      stack.append(f"    <dateModified>{formatDateString(dateNow())} +0100</dateModified>")
-      stack.append(f"    <ownerName>PodcastIndex.org</ownerName>")
-      stack.append(f"  </head>")
-      stack.append(f"  <body>")
-      stack.append(f"    <outline text=\"{cat}\">")
+      #stack = []
+      #stack.append(f"<?xml version=\"1.0\" encoding=\"UTF-8\"?>")
+      #stack.append(f"<!-- Source: https://b19.se/data/opml/podcastindex/{opml_url} -->")
+      #stack.append(f"<opml version=\"2.0\" xmlns:podcast=\"https://github.com/Podcastindex-org/podcast-namespace/blob/main/docs/1.0.md\">")
+      #stack.append(f"  <head>")
+      #stack.append(f"    <title>Podcasting 2.0 - Value4Value Category '{cat}'</title>")
+      #stack.append(f"    <dateCreated>{formatDateString(dateNow())} +0100</dateCreated>")
+      #stack.append(f"    <dateModified>{formatDateString(dateNow())} +0100</dateModified>")
+      #stack.append(f"    <ownerName>PodcastIndex.org</ownerName>")
+      #stack.append(f"  </head>")
+      #stack.append(f"  <body>")
+      #stack.append(f"    <outline text=\"{cat}\">")
+
+      # Open OPML
+      opml = etree.Element("opml", version = "2.0")
+
+      # Open Head
+      head = etree.SubElement(opml, "head")
+
+      # Handle Title
+      title_text = f"Podcasting 2.0 - Value4Value Category '{cat}'"
+      title = etree.Element("title")
+      title.text = str(title_text)
+      head.append(title)
+
+      # Handle dateCreated
+      datecreated_text = f"{formatDateString(dateNow())} +0100"
+      dateCreated = etree.Element("dateCreated")
+      dateCreated.text = str(datecreated_text)
+      head.append(dateCreated)
+
+      # Handle dateCreated
+      datemodified_text = f"{formatDateString(dateNow())} +0100"
+      dateModified = etree.Element("dateModified")
+      dateModifies.text = str(datemodified_text)
+      head.append(dateModified)
+
+      # Handle ownerName
+      ownerName_text = f"{formatDateString(dateNow())} +0100"
+      ownerName = etree.Element("ownerName")
+      ownerName.text = "PodcastIndex.org"
+      head.append(ownerName)
+
+      # Close Head
+      opml.append(head)
+
+      # Drop source comment
+      comment_text = f" Source: https://b19.se/data/opml/podcastindex/{opml_url} "
+      comment = etree.Comment(comment_text)
+      opml.append(comment)
+
+      # Open body
+      body = etree.Element("body")
+
+      outline_cat = etree.Element("outline")
+      outline_cat.set("text", str(cat))
 
       for feed in feeds:
         item_stack = []
 
+        outline_item = etree.Element("outline")
+
         if "type" in feed:
           if feed['type'] != None:
-            #item_stack.append(f"type=\"{feed['type']}\"")
-            item_stack.append(f"type=\"link\"")
+            outline_item.set("type", "link")
 
         if "version" in feed:
           if feed['version'] != None:
-            #item_stack.append(f"version=\"{feed['version']}\"")
-            item_stack.append(f"version=\"RSS\"")
+            outline_item.set("version", "RSS")
 
         if "language" in feed:
           if feed['language'] != None:
             item_language = snipLanguage(feed['language'])
-            item_stack.append(f"language=\"{item_language}\"")
-
-        #if "feedGuid" in feed:
-        #  if feed['feedGuid'] != None:
-        #    item_stack.append(f"podcast:feedGuid=\"{feed['feedGuid']}\"")
+            outline_item.set("language", str(item_language))
 
         if "xmlurl" in feed:
           if feed['xmlurl'] != None:
             item_xmlUrl = urlEncode(feed['xmlurl'])
-            item_stack.append(f"xmlUrl=\"{item_xmlUrl}\"")
+            outline_item.set("xmlUrl", str(item_xmlUrl))
 
         if "htmlUrl" in feed:
           if feed['htmlUrl'] != None:
             item_htmlUrl = urlEncode(feed['htmlUrl'])
-            item_stack.append(f"htmlUrl=\"{item_htmlUrl}\"")
+            outline_item.set("htmlUrl", str(item_htmlUrl))
 
         if "image" in feed:
           if feed['image'] != None:
             item_imgUrl = urlEncode(feed['image'])
-            item_stack.append(f"image=\"{item_imgUrl}\"")
+            outline_item.set("image", str(item_imgUrl))
 
         if "title" in feed:
           if feed['title'] != None:
             item_title = htmlEncode(fullTrim(feed['title']))
-            item_stack.append(f"title=\"{item_title}\"")
+            outline_item.set("title", str(item_title))
 
         if "text" in feed:
           if feed['text'] != None:
             item_text = htmlEncode(fullTrim(feed['text']))
-            item_stack.append(f"text=\"{item_text}\"")
+            outline_item.set("text", str(item_text))
 
-        #if "description" in feed:
-        #  if feed['description'] != None:
-        #    item_description = htmlEncode(fullTrim(feed['description']))
-        #    item_stack.append(f"description=\"{item_description}\"")
+        outline_cat.append(outline_item)
 
-        if len(item_stack) > 0:
-          item_contents = " ".join(item_stack)
+      # Add outlines to body
+      body.append(outline_cat)
 
-          stack.append(f"      <outline {item_contents}/>")
+      # Close body
+      opml.append(body)
 
-      stack.append(f"    </outline>")
-      stack.append(f"  </body>")
-      stack.append(f"</opml>")
-
-
-      opml_contents = "\n".join(stack)
-      #print(opml_contents)
-
-      writeFile(filepath, opml_contents)
+      opml_contents = etree.tostring(opml, pretty_print=True, xml_declaration=True, encoding='UTF-8').decode()
+      writeOPML(filepath, opml_contents)
 
     print("Done!")
 
