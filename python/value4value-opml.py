@@ -71,7 +71,7 @@ class APIAuthorization:
     return headers
 
 
-
+ORIGIN_DATE = "2021-11-13 21:25:03"
 
 USER_AGENT = 'Mozilla/5.0 (PodcastIndex.Org - OPML/@cisene@podcastindex.social)'
 
@@ -395,7 +395,7 @@ def renderCategoriesToOPML(idx):
       head.append(title)
 
       # Handle dateCreated
-      datecreated_text = f"{formatDateString(dateNow())} +0100"
+      datecreated_text = f"{formatDateString(ORIGIN_DATE)} +0100"
       dateCreated = etree.Element("dateCreated")
       dateCreated.text = str(datecreated_text)
       head.append(dateCreated)
