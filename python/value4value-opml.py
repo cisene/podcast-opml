@@ -403,7 +403,7 @@ def renderCategoriesToOPML(idx):
       # Handle dateCreated
       datemodified_text = f"{formatDateString(dateNow())} +0100"
       dateModified = etree.Element("dateModified")
-      dateModifies.text = str(datemodified_text)
+      dateModified.text = str(datemodified_text)
       head.append(dateModified)
 
       # Handle ownerName
