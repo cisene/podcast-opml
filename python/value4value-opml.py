@@ -304,8 +304,12 @@ def fetchIndex(headers):
 
         if "nextStartAt" in objects:
           if objects['nextStartAt'] != None:
-            url_start_at_old = url_start_at
-            url_start_at = objects['nextStartAt']
+            url_start_at_new = objects['nextStartAt']
+            if url_start_at_new >= url_start_at_old:
+              url_start_at = url_start_at_new
+              url_start_at_old = url_start_at_new
+            else:
+              last_round = True
         else:
           last_round = True
 
