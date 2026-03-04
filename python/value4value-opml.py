@@ -17,6 +17,10 @@ from xml.etree.ElementTree import Element, SubElement, Comment
 
 from lxml import etree
 
+import collections
+from collections import defaultdict
+from collections import OrderedDict
+
 
 class APIAuthorization:
 
@@ -322,16 +326,16 @@ def fetchIndex(headers):
           for obj in feeds:
 
             opml_item = {
-              'feedGuid': obj['podcastGuid'],
-              'language': obj['language'],
-              'title': obj['title'],
-              'text': obj['title'],
-              'xmlurl': obj['url'],
-              'htmlUrl': obj['link'],
-              'description': obj['description'],
-              'image': obj['image'],
-              'type': 'link',
-              'version': 'RSS',
+              'feedGuid':     obj['podcastGuid'],
+              'language':     obj['language'],
+              'title':        obj['title'],
+              'text':         obj['title'],
+              'xmlurl':       obj['url'],
+              'htmlUrl':      obj['link'],
+              'description':  obj['description'],
+              'image':        obj['image'],
+              'type':         'link',
+              'version':      'RSS',
             }
 
             if "categories" in obj:
@@ -357,8 +361,6 @@ def fetchIndex(headers):
     if last_round == True:
       break
 
-  state_contents = json.dumps(dictIndex)
-  writeFile(PODCASTING20_STATE, state_contents)
   return dictIndex
 
 def renderCategoriesToOPML(idx):
@@ -373,18 +375,8 @@ def renderCategoriesToOPML(idx):
 
       feeds = idx[cat]
 
-      #stack = []
-      #stack.append(f"<?xml version=\"1.0\" encoding=\"UTF-8\"?>")
-      #stack.append(f"<!-- Source: https://b19.se/data/opml/podcastindex/{opml_url} -->")
-      #stack.append(f"<opml version=\"2.0\" xmlns:podcast=\"https://github.com/Podcastindex-org/podcast-namespace/blob/main/docs/1.0.md\">")
-      #stack.append(f"  <head>")
-      #stack.append(f"    <title>Podcasting 2.0 - Value4Value Category '{cat}'</title>")
-      #stack.append(f"    <dateCreated>{formatDateString(dateNow())} +0100</dateCreated>")
-      #stack.append(f"    <dateModified>{formatDateString(dateNow())} +0100</dateModified>")
-      #stack.append(f"    <ownerName>PodcastIndex.org</ownerName>")
-      #stack.append(f"  </head>")
-      #stack.append(f"  <body>")
-      #stack.append(f"    <outline text=\"{cat}\">")
+      feeds = {}
+      feeds = sorted(idx[cat], key = lambda d: d.get('title'), reverse=False)
 
       # Open OPML
       opml = etree.Element("opml", version = "2.0")
@@ -420,7 +412,7 @@ def renderCategoriesToOPML(idx):
       opml.append(head)
 
       # Drop source comment
-      comment_text = f" Source: https://b19.se/data/opml/podcastindex/{opml_url} "
+      comment_text = f" Source: https://b19.se/data/opml/value4value/{opml_url} "
       comment = etree.Comment(comment_text)
       opml.append(comment)
 
@@ -500,11 +492,6 @@ def main():
 
   headers = auth.generateHeaders()
 
-
-  #if os.path.isfile(PODCASTING20_STATE):
-  #  contents = LoadContents(PODCASTING20_STATE)
-  #  pc20index = json.loads(contents)
-  #else:
   pc20index = fetchIndex(headers)
 
   renderCategoriesToOPML(pc20index)
